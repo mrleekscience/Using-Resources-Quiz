@@ -1,0 +1,3125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr Leek Science — AQA GCSE Chemistry Topic 10: Using Resources</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       MR LEEK SCIENCE — CRIMSON / RUBY RED DESIGN TOKENS (TOPIC 10)
+       ========================================================================== */
+    :root {
+      --crimson-950: #1f070a;
+      --crimson-900: #450a0a;
+      --crimson-800: #7f1d1d;
+      --ruby-700: #991b1b;
+      --ruby-600: #b91c1c;
+      --ruby-500: #dc2626;
+      --ruby-400: #ef4444;
+
+      --rose-200: #fecaca;
+      --rose-100: #fee2e2;
+      --rose-50: #fef2f2;
+      --rose-tint: #fffafa;
+
+      --bg-page: #f8fafc;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      --blue-100: #e0f2fe;
+      --blue-700: #0369a1;
+      --green-chip-bg: #dcfce7;
+      --green-chip-fg: #15803d;
+      --purple-100: #f3e8ff;
+      --purple-700: #7e22ce;
+
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+
+      --amber-700: #b45309;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+
+      --shadow-shell: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-cta: 0 6px 18px -2px rgba(185, 28, 28, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--slate-900);
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ==========================================================================
+       CENTERED MAIN CARD CONTAINER
+       ========================================================================== */
+    .app-container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-shell);
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       TOP CRIMSON BANNER HEADER
+       ========================================================================== */
+    .banner-header {
+      background: linear-gradient(135deg, #1f070a 0%, #450a0a 50%, #7f1d1d 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .banner-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rose-200);
+    }
+
+    .brand-tag {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .banner-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .banner-subtitle {
+      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 800px;
+      line-height: 1.52;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       WHITE FORM BODY
+       ========================================================================== */
+    .card-body {
+      padding: 28px 36px 36px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    /* Row 1: Student Name & Email Address */
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+
+    .field-label .req-star {
+      color: var(--ruby-600);
+      margin-left: 2px;
+    }
+
+    .field-label .opt-muted {
+      color: var(--slate-400);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      background: #ffffff;
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .text-input::placeholder {
+      color: var(--slate-400);
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--ruby-600);
+      box-shadow: 0 0 0 3.5px rgba(185, 28, 28, 0.14);
+    }
+
+    .text-input.input-error {
+      border-color: var(--ruby-500);
+      background-color: var(--rose-50);
+      animation: shakeInput 0.34s ease;
+    }
+
+    .error-hint {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ruby-600);
+      margin-top: 5px;
+    }
+
+    @keyframes shakeInput {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .selected-tier-pill {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      color: var(--ruby-600);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .avail-count-text {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+
+    /* Row 2: 3-Column Tier Selection Grid */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tier-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .tier-card.selected {
+      border-color: var(--ruby-600);
+      background: var(--rose-tint);
+      box-shadow: 0 4px 14px rgba(185, 28, 28, 0.09);
+    }
+
+    .tier-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .spec-chip {
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .chip-blue {
+      background: var(--blue-100);
+      color: var(--blue-700);
+    }
+
+    .chip-green {
+      background: var(--green-chip-bg);
+      color: var(--green-chip-fg);
+    }
+
+    .chip-purple {
+      background: var(--purple-100);
+      color: var(--purple-700);
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--slate-300);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-circle svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--slate-300);
+      stroke-width: 2.8;
+      fill: none;
+    }
+
+    .tier-card.selected .radio-circle {
+      background: var(--ruby-600);
+      border-color: var(--ruby-600);
+    }
+
+    .tier-card.selected .radio-circle svg {
+      stroke: #ffffff;
+    }
+
+    .tier-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-600);
+      line-height: 1.52;
+    }
+
+    /* Row 3: 2-Column Quiz Focus Grid */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .focus-card.selected {
+      border-color: var(--ruby-600);
+      background: var(--rose-tint);
+      box-shadow: 0 4px 14px rgba(185, 28, 28, 0.09);
+    }
+
+    .focus-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .focus-icon-ruby {
+      background: var(--ruby-600);
+      color: #ffffff;
+    }
+
+    .focus-icon-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+    }
+
+    .focus-card.selected .focus-icon-amber {
+      background: var(--ruby-600);
+      color: #ffffff;
+    }
+
+    .focus-content {
+      flex: 1;
+    }
+
+    .focus-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .focus-check {
+      color: var(--ruby-600);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .focus-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.48;
+    }
+
+    /* Row 4: Number of Questions 5-Column Grid */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .count-btn {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .count-btn:hover:not(.active) {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+    }
+
+    .count-btn.active {
+      background: var(--ruby-600);
+      border-color: var(--ruby-600);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.28);
+    }
+
+    .cap-notice {
+      margin-top: 9px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--amber-700);
+      background: var(--amber-50);
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 7px 12px;
+    }
+
+    /* Divider + Bottom Full-Width CTA */
+    .cta-divider {
+      border: none;
+      border-top: 1px solid var(--slate-200);
+      margin: 26px 0 22px;
+    }
+
+    .btn-start-cta {
+      width: 100%;
+      background: var(--ruby-600);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-cta);
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-start-cta:hover {
+      background: var(--ruby-700);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SCREEN 2: ACTIVE QUIZ INTERFACE
+       ========================================================================== */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hud-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hud-pill-brand {
+      background: var(--crimson-950);
+      color: #ffffff;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .hud-pill-dark {
+      background: var(--crimson-800);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-rose {
+      background: var(--rose-50);
+      color: var(--ruby-600);
+      border: 1px solid var(--rose-200);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hud-score-badge {
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+      border: 1px solid #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .hud-q-counter {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+
+    .hud-change-btn {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .hud-change-btn:hover {
+      border-color: var(--ruby-600);
+      color: var(--ruby-600);
+      background: var(--rose-50);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--ruby-700), var(--ruby-500));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: var(--rose-50);
+      border: 1.5px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .q-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .q-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ruby-600);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .rp-badge {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      border: 1px solid #fcd34d;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    .kbd-tip {
+      font-size: 0.73rem;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+
+    .q-stem {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.52;
+    }
+
+    .q-formula-box {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--rose-200);
+      border-left: 4px solid var(--ruby-600);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: "Plus Jakarta Sans", "Inter", monospace;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--crimson-900);
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.84rem;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--rose-200);
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .data-table th {
+      background: var(--rose-50);
+      color: var(--crimson-900);
+      font-weight: 700;
+    }
+
+    .data-table td {
+      background: #ffffff;
+      color: var(--slate-800);
+      font-weight: 600;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 18px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: all 0.15s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--ruby-600);
+      background: var(--rose-50);
+    }
+
+    .opt-btn:disabled {
+      cursor: default;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      border-color: var(--emerald-600);
+      background: var(--emerald-50);
+      color: var(--slate-900);
+    }
+
+    .opt-btn.correct .opt-letter {
+      background: var(--emerald-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.incorrect {
+      border-color: var(--ruby-600);
+      background: var(--rose-50);
+      color: var(--crimson-900);
+    }
+
+    .opt-btn.incorrect .opt-letter {
+      background: var(--ruby-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.dimmed {
+      opacity: 0.55;
+    }
+
+    .feedback-panel {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback-panel.fb-pass {
+      background: var(--emerald-50);
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--emerald-600);
+    }
+
+    .feedback-panel.fb-fail {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-left: 5px solid var(--ruby-600);
+    }
+
+    .fb-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fb-status {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .fb-pass .fb-status { color: var(--emerald-700); }
+    .fb-fail .fb-status { color: var(--ruby-600); }
+
+    .fb-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--slate-700);
+      border: 1px solid var(--slate-200);
+    }
+
+    .fb-text {
+      font-size: 0.91rem;
+      color: var(--slate-800);
+      line-height: 1.56;
+    }
+
+    .quiz-bottom-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .btn-primary-sm {
+      background: var(--ruby-600);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.25);
+      transition: background 0.16s ease;
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--ruby-700);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    .report-hero-box {
+      background: var(--rose-50);
+      border: 1.5px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-student-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ruby-600);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .report-score-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .report-pct {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      font-weight: 800;
+      color: var(--ruby-600);
+      line-height: 1;
+    }
+
+    .report-fraction {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background: var(--crimson-800);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .report-summary-msg {
+      font-size: 0.93rem;
+      color: var(--slate-700);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .report-btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mastery-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .mastery-section-head h3 {
+      font-size: 1.05rem;
+      color: var(--slate-900);
+    }
+
+    .legend-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+
+    .tag-g { background: var(--emerald-50); color: var(--emerald-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-a { background: var(--amber-50); color: var(--amber-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-r { background: var(--rose-50); color: var(--ruby-600); padding: 3px 9px; border-radius: 999px; }
+
+    .mastery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mastery-item {
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #ffffff;
+    }
+
+    .mastery-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mastery-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--slate-900);
+    }
+
+    .mastery-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .sc-strong { background: var(--emerald-100); color: var(--emerald-700); }
+    .sc-dev { background: var(--amber-100); color: var(--amber-700); }
+    .sc-weak { background: var(--rose-100); color: var(--ruby-600); }
+
+    .mastery-bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    .mastery-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-g { background: var(--emerald-600); }
+    .fill-a { background: var(--amber-600); }
+    .fill-r { background: var(--ruby-600); }
+
+    .mastery-tip {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      border: 1.5px solid var(--slate-200);
+      border-left: 5px solid var(--slate-400);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .review-card.rc-ok { border-left-color: var(--emerald-600); }
+    .review-card.rc-bad { border-left-color: var(--ruby-600); }
+
+    .rc-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--ruby-600);
+      margin-bottom: 4px;
+    }
+
+    .rc-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .rc-ans {
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+    }
+
+    .rc-exp {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--slate-200);
+      font-size: 0.84rem;
+      color: var(--slate-700);
+      line-height: 1.52;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 820px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem 0.65rem 2rem;
+      }
+      .banner-header {
+        padding: 24px 20px;
+      }
+      .card-body {
+        padding: 20px 18px 26px;
+      }
+      .input-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .count-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .kbd-tip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ======================================================================
+         CRIMSON HEADER BANNER
+         ====================================================================== -->
+    <header class="banner-header">
+      <div class="banner-top-row">
+        <span class="spec-pill">TOPIC 10 &bull; PAPER 2 REVISION (8462 &amp; 8464)</span>
+        <span class="brand-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fecaca" stroke-width="2.2">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+            <path d="M8 12l2.5 2.5L16 9"></path>
+          </svg>
+          Mr Leek Science
+        </span>
+      </div>
+      <h1 id="banner-main-title" class="banner-title">Configure Your Using Resources Quiz</h1>
+      <p id="banner-main-sub" class="banner-subtitle">Enter your name, choose your tier or Separate Chemistry pathway, select either all Topic 10 content or a focused Required Practical 8 &amp; Water drill, and pick your question count.</p>
+    </header>
+
+    <!-- ======================================================================
+         VIEW 1: CONFIGURATION SCREEN
+         ====================================================================== -->
+    <main id="view-config" class="card-body">
+      <!-- Row 1: Student Name & Email Address -->
+      <div class="section-block input-grid">
+        <div class="field-group">
+          <label for="student-name" class="field-label">Student Name <span class="req-star">*</span></label>
+          <input type="text" id="student-name" class="text-input" placeholder="Enter your full name" autocomplete="name" />
+          <span id="name-error-msg" class="error-hint hidden">Please enter your name before starting the quiz.</span>
+        </div>
+
+        <div class="field-group">
+          <label for="student-email" class="field-label">Email Address <span class="opt-muted">(Optional)</span></label>
+          <input type="email" id="student-email" class="text-input" placeholder="e.g. student@school.co.uk" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Row 2: Select Tier / Pathway -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Select Tier / Pathway</span>
+          <span id="selected-tier-badge" class="selected-tier-pill">Higher Tier Selected</span>
+        </div>
+
+        <div class="tier-grid" role="radiogroup" aria-label="Select Tier or Pathway">
+          <!-- Foundation Tier -->
+          <div class="tier-card" id="tier-card-foundation" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('foundation')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('foundation')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-blue">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Foundation Tier</div>
+            <p class="tier-card-desc">Finite vs. renewable resources, potable water filtration &amp; sterilisation, desalination, waste water treatment, LCAs, and reduce/reuse/recycle (Grades 1–5).</p>
+          </div>
+
+          <!-- Higher Tier (Default Selected) -->
+          <div class="tier-card selected" id="tier-card-higher" role="radio" aria-checked="true" tabindex="0" onclick="selectTier('higher')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('higher')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-green">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Higher Tier</div>
+            <p class="tier-card-desc">Adds phytomining &amp; bioleaching extraction equations, evaluating selective LCA bias/greenwashing, reverse osmosis vs. distillation energy costs, and RP8 calculations (Grades 4–9).</p>
+          </div>
+
+          <!-- Separate Chemistry -->
+          <div class="tier-card" id="tier-card-separate" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('separate')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('separate')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-purple">TRIPLE 8462</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Separate Chemistry</div>
+            <p class="tier-card-desc">Full 8462 Using Resources syllabus: rusting &amp; sacrificial protection, alloys, ceramics/polymers/composites, Haber process equilibrium &amp; compromise conditions, and NPK fertilisers (Grades 1–9).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Quiz Focus -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Quiz Focus</span>
+        </div>
+
+        <div class="focus-grid" role="radiogroup" aria-label="Quiz Focus">
+          <!-- Card 1: All Topics -->
+          <div class="focus-card selected" id="focus-card-all" role="radio" aria-checked="true" tabindex="0" onclick="selectFocus('all')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('all')">
+            <div class="focus-icon-box focus-icon-ruby" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>All Using Resources Topics</span>
+                <span id="focus-check-all" class="focus-check">&#10003;</span>
+              </div>
+              <p class="focus-desc">Covers sustainability, potable &amp; waste water, bioleaching &amp; phytomining, LCAs, recycling, plus Triple corrosion, alloys, materials, Haber process &amp; NPK fertilisers.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Required Practicals & Water Only -->
+          <div class="focus-card" id="focus-card-practicals" role="radio" aria-checked="false" tabindex="0" onclick="selectFocus('practicals')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('practicals')">
+            <div class="focus-icon-box focus-icon-amber" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>Required Practicals &amp; Water Only</span>
+                <span id="focus-check-practicals" class="focus-check hidden">&#10003;</span>
+              </div>
+              <p class="focus-desc">Focused practical drill on Required Practical 8 (Analysis &amp; purification of water samples — pH, dissolved solids mass, simple distillation) &amp; potable/waste water treatment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Number of Questions -->
+      <div class="section-block" style="margin-bottom: 0;">
+        <div class="section-header-bar">
+          <span class="section-title">Number of Questions</span>
+          <span id="available-q-label" class="avail-count-text">34 unique questions available for Higher Tier</span>
+        </div>
+
+        <div class="count-grid" role="radiogroup" aria-label="Number of Questions">
+          <button type="button" class="count-btn" data-count="10" onclick="selectCount(10)">10</button>
+          <button type="button" class="count-btn active" data-count="20" onclick="selectCount(20)">20</button>
+          <button type="button" class="count-btn" data-count="30" onclick="selectCount(30)">30</button>
+          <button type="button" class="count-btn" data-count="50" onclick="selectCount(50)">50</button>
+          <button type="button" class="count-btn" data-count="80" onclick="selectCount(80)">80</button>
+        </div>
+
+        <div id="cap-feedback-banner" class="cap-notice hidden"></div>
+      </div>
+
+      <hr class="cta-divider" />
+
+      <button type="button" id="btn-start-quiz" class="btn-start-cta" onclick="launchConfiguredQuiz()">
+        Start Higher Tier Quiz (20 Questions) &rarr;
+      </button>
+    </main>
+
+    <!-- ======================================================================
+         VIEW 2: ACTIVE QUIZ RUNNER
+         ====================================================================== -->
+    <section id="view-quiz" class="card-body hidden" aria-live="polite">
+      <div class="quiz-hud">
+        <div class="hud-badges">
+          <span class="hud-pill-brand">Mr Leek Science</span>
+          <span id="hud-student-pill" class="hud-pill-dark">Student</span>
+          <span id="hud-tier-pill" class="hud-pill-rose">Higher Tier</span>
+          <span id="hud-focus-pill" class="hud-pill-rose">All Using Resources Topics</span>
+          <span id="hud-retry-pill" class="hud-pill-amber hidden">Retry Missed Mode</span>
+        </div>
+
+        <div class="hud-stats">
+          <span id="hud-live-score" class="hud-score-badge">Score: 0 / 0</span>
+          <span id="hud-counter" class="hud-q-counter">Question 1 of 20</span>
+          <button type="button" class="hud-change-btn" onclick="returnToConfig()">Exit / Reconfigure</button>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quiz-progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-meta-row">
+          <span id="q-kicker-label" class="q-kicker">Question 1 &bull; Sub-topic</span>
+          <span class="kbd-tip">Shortcuts: 1–4 or A–D to answer &bull; Enter for Next</span>
+        </div>
+        <div id="q-stem-text" class="q-stem">Question stem</div>
+        <div id="q-formula-box" class="q-formula-box hidden"></div>
+      </div>
+
+      <div id="quiz-options-list" class="options-list"></div>
+
+      <div id="quiz-feedback-panel" class="feedback-panel hidden">
+        <div class="fb-top">
+          <span id="fb-status-text" class="fb-status"></span>
+          <span class="fb-chip">AQA Examiner Insight</span>
+        </div>
+        <div id="fb-insight-text" class="fb-text"></div>
+      </div>
+
+      <div class="quiz-bottom-actions">
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">&larr; Exit / Reconfigure</button>
+        <button type="button" id="btn-next-question" class="btn-primary-sm hidden" onclick="advanceQuestion()">Next Question &rarr;</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 3: DIAGNOSTIC RESULTS DASHBOARD
+         ====================================================================== -->
+    <section id="view-report" class="card-body hidden">
+      <div class="report-hero-box">
+        <div id="rep-student-header" class="report-student-line">Diagnostic Report &bull; Student</div>
+        <div class="report-score-row">
+          <span id="rep-pct-val" class="report-pct">85%</span>
+          <span id="rep-frac-val" class="report-fraction">(17 / 20)</span>
+        </div>
+        <div id="rep-grade-pill" class="grade-pill">Estimated AQA Indicator: Grade 8–9</div>
+        <p id="rep-msg-text" class="report-summary-msg"></p>
+      </div>
+
+      <div class="report-btn-row">
+        <button type="button" id="btn-retry-missed" class="btn-primary-sm" onclick="startRetryMissed()">Retry Missed Questions (3)</button>
+        <button type="button" class="btn-secondary" onclick="launchConfiguredQuiz()">Retake Full Quiz</button>
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">Change Settings</button>
+      </div>
+
+      <div class="mastery-section-head">
+        <h3>Sub-Topic Mastery Breakdown</h3>
+        <div class="legend-row">
+          <span class="tag-g">Strong Area (&ge;80%)</span>
+          <span class="tag-a">Developing (50–79%)</span>
+          <span class="tag-r">Priority Revision (&lt;50%)</span>
+        </div>
+      </div>
+
+      <div id="rep-mastery-grid" class="mastery-grid"></div>
+
+      <div class="review-header">
+        <h3 style="font-size: 1.05rem; color: var(--slate-900);">Full Question-by-Question Review</h3>
+        <button type="button" id="btn-toggle-review" class="btn-secondary" onclick="toggleReviewSection()">Show Full Question-by-Question Review</button>
+      </div>
+
+      <div id="rep-review-list" class="review-list hidden"></div>
+    </section>
+  </div>
+
+  <p class="footer-note">&copy; Mr Leek Science &bull; AQA GCSE Chemistry (8462 &amp; 8464) Topic 10 Using Resources Interactive Assessment</p>
+
+  <script>
+    /* ==========================================================================
+       AQA GCSE CHEMISTRY TOPIC 10 QUESTION BANK (74 UNIQUE QUESTIONS)
+       Subtopics:
+       1. Sustainable Development, Potable Water & Waste Water Treatment (18 Qs, isPractical: true)
+       2. Alternative Metal Extraction, LCAs & Recycling (16 Qs)
+       3. Corrosion, Alloys & Materials (16 Qs) [Separate 8462]
+       4. The Haber Process & NPK Fertilisers (24 Qs) [Separate 8462]
+       ========================================================================== */
+    const SUBTOPIC_GUIDANCE = {
+      "Sustainable Development, Potable Water & Waste Water Treatment": "Distinguish potable water (safe to drink, low dissolved salts, no microbes—NOT chemically pure!) from pure water (only H<sub>2</sub>O). For UK fresh water: choose an appropriate source, pass through filter beds, and sterilise with chlorine, ozone, or UV light. For salty water: desalination by distillation or reverse osmosis requires huge energy. For waste water: screening &amp; grit removal &rarr; sedimentation (sewage sludge vs. effluent) &rarr; anaerobic digestion of sludge and aerobic biological treatment of effluent. For RP8: check pH (~7), evaporate a known volume to find dissolved solids mass, and distill.",
+      "Alternative Metal Extraction, LCAs & Recycling": "Know why phytomining (growing plants that absorb metal compounds, harvesting, burning to ash, leaching with acid) and bioleaching (bacteria produce leachate solutions containing metal compounds) are used for low-grade copper ores, followed by displacement with scrap iron or electrolysis. For Life Cycle Assessments (LCAs): evaluate all 4 stages (raw materials, manufacture, use, disposal) and note that allocating numerical scores requires subjective value judgements that can be misused in selective advertising.",
+      "Corrosion, Alloys & Materials": "For Triple 8462: rusting is the corrosion of iron/steel requiring BOTH oxygen and water (hydrated iron(III) oxide). Compare barrier methods (grease, paint, electroplating) with sacrificial protection (galvanising with more reactive zinc, which corrodes first even if scratched). Memorise alloys (bronze = Cu+Sn, brass = Cu+Zn, gold carats out of 24, steels, magnalium), soda-lime vs. borosilicate glass, clay ceramics, thermosoftening vs. thermosetting polymers, LDPE vs. HDPE, and composites.",
+      "The Haber Process & NPK Fertilisers": "For Triple 8462: N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g) (forward reaction is exothermic, 4 gas moles &rarr; 2 gas moles). Nitrogen comes from air; hydrogen from natural gas (methane) + steam. Explain the compromise conditions: 450 &deg;C (low enough for reasonable equilibrium yield, high enough for fast rate), 200 atm (favours fewer gas moles for higher yield &amp; faster rate without extreme vessel cost/danger), plus an iron catalyst. Know how phosphate rock is treated with nitric, sulfuric, and phosphoric acids to produce soluble NPK salts, and compare industrial vs. laboratory ammonium sulfate production."
+    };
+
+    const QUESTION_POOL = [
+      // ========================================================================
+      // 1. SUSTAINABLE DEVELOPMENT, POTABLE WATER & WASTE WATER (18 Qs, RP8)
+      // ========================================================================
+      {
+        id: "T10_Q01",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "What is the exact AQA definition of SUSTAINABLE DEVELOPMENT?",
+        formulaBox: "Core principle of Using Resources",
+        options: [
+          "Development that meets the needs of current generations without compromising the ability of future generations to meet their own needs",
+          "Using up all finite fossil fuels as rapidly as possible to maximise short-term economic growth",
+          "Banning all manufacturing and agriculture worldwide",
+          "Extracting metals only from high-grade ores until they run out"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification exact definition: Sustainable development is development that meets the needs of current generations without compromising the ability of future generations to meet their own needs."
+      },
+      {
+        id: "T10_Q02",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "Which list contains ONLY FINITE resources (resources that are being used up faster than they can be replaced)?",
+        formulaBox: "Finite vs. Renewable resources",
+        options: [
+          "Crude oil, coal, natural gas, and metal ores",
+          "Timber (wood from managed forests), wool, cotton, and sunlight",
+          "Wind energy, rainwater, and fast-growing crops",
+          "Sea water, atmospheric nitrogen, and solar radiation"
+        ],
+        correctIndex: 0,
+        explanation: "Fossil fuels (coal, oil, natural gas) and metal ores take millions of years to form, so they are finite."
+      },
+      {
+        id: "T10_Q03",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "What is the scientific difference between POTABLE WATER and CHEMICALLY PURE WATER?",
+        formulaBox: "Potable water vs. Pure H<sub>2</sub>O",
+        options: [
+          "Potable water is safe to drink and contains low levels of dissolved salts and no harmful microbes, whereas chemically pure water contains ONLY H<sub>2</sub>O molecules with zero dissolved substances",
+          "Potable water is 100% pure H<sub>2</sub>O, whereas chemically pure water contains dissolved minerals and chlorine",
+          "Potable water is sea water straight from the ocean, whereas pure water is tap water",
+          "There is no difference—both terms mean exactly the same thing"
+        ],
+        correctIndex: 0,
+        explanation: "Examiner Key Distinction: Potable water is water that is safe to drink. Potable water is NOT pure water in the chemical sense because it contains dissolved substances (mineral ions)."
+      },
+      {
+        id: "T10_Q04",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "In the UK, rain provides fresh water with low levels of dissolved substances that collects in the ground, lakes, and rivers. What are the TWO main treatment steps used to produce potable water from fresh water?",
+        formulaBox: "UK fresh water &rarr; Potable tap water",
+        options: [
+          "1. Passing the water through filter beds (to remove insoluble solids) &rarr; 2. Sterilising (to kill harmful microbes)",
+          "1. Fractional distillation &rarr; 2. Electrolysis",
+          "1. Adding sodium chloride &rarr; 2. Anaerobic digestion",
+          "1. Heating with carbon &rarr; 2. Phytomining"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Most potable water in the UK is produced by choosing an appropriate source of fresh water, passing the water through filter beds, and sterilising."
+      },
+      {
+        id: "T10_Q05",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "Which THREE sterilising agents are used to kill microbes in potable water treatment?",
+        formulaBox: "Sterilisation agents in water treatment",
+        options: [
+          "Chlorine, ozone, or ultraviolet (UV) light",
+          "Sulfuric acid, sodium hydroxide, or limewater",
+          "Methane, carbon monoxide, or nitrogen",
+          "Calcium carbonate, sand, or gravel"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Sterilising agents used for potable water include chlorine, ozone, or ultraviolet light."
+      },
+      {
+        id: "T10_Q06",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "In dry countries with limited supplies of fresh water (such as Saudi Arabia), DESALINATION of salty sea water is used to produce potable water. Which TWO processes can be used for desalination, and what is their main disadvantage?",
+        formulaBox: "Desalination of sea water",
+        options: [
+          "Distillation or processes that use membranes such as reverse osmosis — both require very large amounts of energy and are expensive",
+          "Simple sand filtration and chlorination — both produce toxic chlorine gas",
+          "Sedimentation and aerobic digestion — both take 10 years",
+          "Electrolysis and cracking — both require no energy"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: If supplies of fresh water are limited, desalination of salty water or sea water may be required. Desalination can be done by distillation or by processes that use membranes such as reverse osmosis. These processes require large amounts of energy."
+      },
+      {
+        id: "T10_Q07",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "higher",
+        isPractical: true,
+        question: "How does REVERSE OSMOSIS remove dissolved sodium chloride ions from salty sea water?",
+        formulaBox: "High pressure + Partially permeable membrane",
+        options: [
+          "High pressure is applied to the salty water to force water molecules through a partially permeable membrane from a more concentrated solution to a more dilute solution, leaving salt ions behind",
+          "Sea water is boiled at 100 &deg;C and the steam is condensed",
+          "Bacteria digest the sodium chloride into harmless nitrogen gas",
+          "Chlorine gas precipitates out the sodium ions"
+        ],
+        correctIndex: 0,
+        explanation: "Reverse osmosis uses high pressure to push water molecules against the normal osmotic gradient through a semi-permeable membrane that blocks dissolved salt ions."
+      },
+      {
+        id: "T10_Q08",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "Urban lifestyles and industrial processes produce large amounts of WASTE WATER (sewage). What is the FIRST stage of waste water treatment?",
+        formulaBox: "Stage 1 of sewage treatment",
+        options: [
+          "Screening and grit removal (to remove large solid objects like twigs, rags, plastics, and heavy grit)",
+          "Anaerobic digestion by bacteria",
+          "Sterilisation with ultraviolet light",
+          "Simple distillation"
+        ],
+        correctIndex: 0,
+        explanation: "Waste water first passes through metal grids (screening) and grit channels to remove large debris and heavy grit before sedimentation."
+      },
+      {
+        id: "T10_Q09",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "During the SEDIMENTATION stage of waste water treatment, the sewage separates into two layers. How is each layer subsequently treated?",
+        formulaBox: "Sedimentation &rarr; Sewage sludge (bottom) + Liquid effluent (top)",
+        options: [
+          "Sewage sludge is treated by ANAEROBIC digestion (producing biogas fuel and fertiliser); liquid effluent is treated by AEROBIC biological treatment",
+          "Sewage sludge is boiled into drinking water; liquid effluent is burned in power stations",
+          "Both layers are treated by reverse osmosis",
+          "Sewage sludge is treated aerobically; liquid effluent is digested anaerobically"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification exact pairing: Sewage treatment includes screening and grit removal, sedimentation to produce sewage sludge and effluent, anaerobic digestion of sewage sludge, and aerobic biological treatment of effluent."
+      },
+      {
+        id: "T10_Q10",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "higher",
+        isPractical: true,
+        question: "Why is ANAEROBIC digestion of sewage sludge useful for making waste water treatment plants more sustainable?",
+        formulaBox: "Anaerobic bacteria (absence of O<sub>2</sub>)",
+        options: [
+          "Anaerobic bacteria break down organic matter in the absence of oxygen to produce methane-rich BIOGAS (burned to generate electricity/heat for the plant) and a solid digestate used as agricultural FERTILISER",
+          "It produces pure oxygen gas for hospitals",
+          "It turns sewage sludge into pure copper metal",
+          "It requires no tanks or bacteria"
+        ],
+        correctIndex: 0,
+        explanation: "Anaerobic digestion recovers renewable methane biogas to power the treatment works while producing nutrient-rich biosolids for farmland."
+      },
+      {
+        id: "T10_Q11",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "higher",
+        isPractical: true,
+        question: "Compare the ease of obtaining potable water from GROUND WATER (aquifers), WASTE WATER, and SALT WATER in terms of energy and treatment steps.",
+        formulaBox: "Comparing water sources",
+        options: [
+          "Ground water requires the least energy/treatment (filtering and sterilising); waste water requires more steps (screening, sedimentation, biological digestion); salt water requires the most energy (distillation or reverse osmosis)",
+          "Salt water requires the least energy because sea water is already pure",
+          "Ground water requires distillation while salt water only needs filtering",
+          "All three require identical energy inputs"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Obtaining potable water from waste water is easier than from salt water (which needs huge energy for desalination), though still more complex than treating fresh ground water."
+      },
+      {
+        id: "T10_Q12",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "In Required Practical 8 (Analysis and purification of water samples), how do you test a water sample's pH and how do you calculate the mass of dissolved solids in a known volume?",
+        formulaBox: "Required Practical 8 — Water Analysis",
+        options: [
+          "Measure pH with universal indicator or a calibrated pH probe; weigh a clean dry evaporating basin, evaporate a measured volume (e.g. 25 cm<sup>3</sup>) of water to dryness, reweigh, and subtract the empty basin mass",
+          "Measure pH with limewater; filter the water and weigh the wet filter paper",
+          "Measure pH with a glowing splint; freeze the water and measure its volume",
+          "Add silver nitrate to find the pH and weigh the precipitate"
+        ],
+        correctIndex: 0,
+        explanation: "Required Practical 8 standard method: Check pH first, then evaporate a measured volume to dryness in a pre-weighed evaporating basin to determine the mass of dissolved solids."
+      },
+      {
+        id: "T10_Q13",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "In Required Practical 8, a student evaporates 50.0 cm<sup>3</sup> of sea water to dryness in an evaporating basin. The empty basin weighs 42.15 g, and the basin + dry solid residue weighs 43.90 g. Calculate the concentration of dissolved solids in g/dm<sup>3</sup>.",
+        formulaBox: "50.0 cm<sup>3</sup> = 0.050 dm<sup>3</sup>; Mass of residue = 43.90 &minus; 42.15 g",
+        options: [
+          "35.0 g/dm<sup>3</sup>",
+          "1.75 g/dm<sup>3</sup>",
+          "87.5 g/dm<sup>3</sup>",
+          "0.035 g/dm<sup>3</sup>"
+        ],
+        correctIndex: 0,
+        explanation: "Mass of dissolved solids = 43.90 &minus; 42.15 = 1.75 g in 50 cm<sup>3</sup>. Since 1000 cm<sup>3</sup> (1 dm<sup>3</sup>) is 20 &times; 50 cm<sup>3</sup>, concentration = 1.75 &times; 20 = 35.0 g/dm<sup>3</sup>."
+      },
+      {
+        id: "T10_Q14",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "In Required Practical 8, a sample of salty water is purified by SIMPLE DISTILLATION using a Liebig condenser. How can you test the collected distillate in the conical flask to confirm it is chemically PURE water?",
+        formulaBox: "Testing distillate purity",
+        options: [
+          "Measure its boiling point (it should boil sharply at 100.0 &deg;C at 1 atm) and evaporate a sample to dryness (it should leave zero solid residue)",
+          "Add universal indicator—pure water turns bright purple",
+          "Test it with a lit splint—it should give a squeaky pop",
+          "Add barium chloride—it should form a white precipitate"
+        ],
+        correctIndex: 0,
+        explanation: "Chemically pure water boils at a sharp 100 &deg;C, has pH 7, and leaves zero dissolved solid residue upon evaporation."
+      },
+      {
+        id: "T10_Q15",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "higher",
+        isPractical: true,
+        question: "In Required Practical 8, when evaporating a water sample to find the mass of dissolved solids, why is it better to heat the evaporating basin gently over a STEAM BATH (beaker of boiling water) rather than directly over a roaring Bunsen flame?",
+        formulaBox: "Avoiding 'spitting' and thermal decomposition",
+        options: [
+          "Heating gently prevents the solid residue from 'spitting' out of the basin (which would cause an artificially low mass) and prevents thermal decomposition of dissolved salts",
+          "Because a Bunsen burner cannot boil water",
+          "Because a steam bath makes the water evaporate in 2 seconds",
+          "To prevent the glass thermometer from melting"
+        ],
+        correctIndex: 0,
+        explanation: "Gentle heating on a steam bath prevents vigorous spitting/loss of solid crystals and avoids decomposing hydrated/carbonate salts."
+      },
+      {
+        id: "T10_Q16",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "higher",
+        isPractical: true,
+        question: "During simple distillation in Required Practical 8, why does cold tap water enter at the BOTTOM of the Liebig condenser and exit at the TOP?",
+        formulaBox: "Counter-current cooling in a Liebig condenser",
+        options: [
+          "So the outer jacket fills completely with cold water and maintains a steep temperature gradient (counter-current flow), ensuring efficient condensation of all steam",
+          "Because water flows upwards against gravity naturally",
+          "To prevent the Bunsen burner from going out",
+          "So the distillate boils inside the condenser"
+        ],
+        correctIndex: 0,
+        explanation: "Feeding water in at the bottom ensures the condenser jacket stays full of cold water rather than draining straight out, maximising condensation."
+      },
+      {
+        id: "T10_Q17",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "higher",
+        isPractical: true,
+        question: "A student analyses four water samples (A, B, C, D) in Required Practical 8. Based on the table below, which sample is most likely SEA WATER and which is DISTILLED WATER?",
+        formulaBox: "<table class='data-table'><tr><th>Sample</th><th>A</th><th>B</th><th>C</th><th>D</th></tr><tr><td><strong>pH</strong></td><td>7.0</td><td>8.1</td><td>5.8</td><td>7.2</td></tr><tr><td><strong>Dissolved solids (g/dm<sup>3</sup>)</strong></td><td>0.00</td><td>34.8</td><td>0.12</td><td>0.28</td></tr></table>",
+        options: [
+          "Sample B is sea water (high dissolved solids 34.8 g/dm<sup>3</sup>, slightly alkaline pH 8.1); Sample A is distilled water (0.00 g/dm<sup>3</sup> solids, pH 7.0)",
+          "Sample A is sea water; Sample B is distilled water",
+          "Sample C is sea water; Sample D is distilled water",
+          "Sample D is sea water; Sample C is distilled water"
+        ],
+        correctIndex: 0,
+        explanation: "Sea water typically contains ~35 g/dm<sup>3</sup> of dissolved salts (Sample B), while distilled water has 0.00 g/dm<sup>3</sup> dissolved solids and pH 7.0 (Sample A)."
+      },
+      {
+        id: "T10_Q18",
+        subtopic: "Sustainable Development, Potable Water & Waste Water Treatment",
+        tier: "foundation",
+        isPractical: true,
+        question: "Why does the Earth's human population growth and industrialisation create pressure on sustainable resource use?",
+        formulaBox: "Population &amp; demand vs. Finite resources",
+        options: [
+          "Increasing demand for energy, metals, building materials, food, and potable water depletes finite resources faster and increases waste and environmental damage",
+          "Humans are creating new metal ores faster than we use them",
+          "The total amount of fresh water on Earth is doubling every year",
+          "Fossil fuels are renewable over a 5-year cycle"
+        ],
+        correctIndex: 0,
+        explanation: "Chemistry plays a vital role in improving agricultural and industrial processes to provide new products and sustainable alternatives."
+      },
+
+      // ========================================================================
+      // 2. ALTERNATIVE METAL EXTRACTION, LCAs & RECYCLING (16 Questions)
+      // ========================================================================
+      {
+        id: "T10_Q19",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "Why are new biological methods such as PHYTOMINING and BIOLEACHING increasingly used to extract copper?",
+        formulaBox: "Low-grade copper ores",
+        options: [
+          "High-grade copper ores are becoming scarce, so phytomining and bioleaching extract copper economically from LOW-GRADE ores while avoiding traditional mining, digging, and moving large amounts of rock",
+          "Because copper is more reactive than potassium",
+          "Because traditional smelting produces zero carbon dioxide",
+          "Because copper ores only exist on the ocean floor"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: The Earth's resources of metal ores are limited. Copper ores are becoming scarce and new ways of extracting copper from low-grade ores include phytomining and bioleaching."
+      },
+      {
+        id: "T10_Q20",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "What are the FOUR steps of PHYTOMINING to extract copper from soil containing low-grade copper compounds?",
+        formulaBox: "Plants &rarr; Ash &rarr; Leachate &rarr; Pure copper",
+        options: [
+          "1. Grow plants on soil containing copper compounds (plants absorb copper ions) &rarr; 2. Harvest and burn the plants to produce ASH containing copper compounds &rarr; 3. Dissolve the ash in sulfuric acid to make a solution &rarr; 4. Extract copper by displacement with scrap iron or electrolysis",
+          "1. Dissolve soil in water &rarr; 2. Freeze the soil &rarr; 3. Distil the ice &rarr; 4. Add chlorine",
+          "1. Heat soil with limestone &rarr; 2. Add bacteria &rarr; 3. Filter through sand &rarr; 4. Paint with zinc",
+          "1. Crush granite &rarr; 2. React with nitrogen &rarr; 3. Condense ammonia &rarr; 4. Fertilise crops"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Phytomining uses plants to absorb metal compounds. The plants are harvested and then burned to produce ash that contains metal compounds."
+      },
+      {
+        id: "T10_Q21",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "How does BIOLEACHING extract copper from low-grade ores?",
+        formulaBox: "Bacteria + Low-grade ore &rarr; Leachate solution",
+        options: [
+          "Bacteria are grown on low-grade ores; the bacteria produce acidic LEACHATE SOLUTIONS that contain soluble metal compounds (such as copper(II) sulfate)",
+          "Plants absorb copper through their leaves from the air",
+          "Bleach is poured onto solid copper pipes to dissolve them",
+          "Copper ore is melted in a blast furnace at 2000 &deg;C"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Bioleaching uses bacteria to produce leachate solutions that contain metal compounds."
+      },
+      {
+        id: "T10_Q22",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "higher",
+        isPractical: false,
+        question: "Once a leachate solution containing copper(II) sulfate, CuSO<sub>4</sub>(aq), has been obtained from phytomining or bioleaching, which TWO methods can extract pure copper metal from the solution?",
+        formulaBox: "Cu<sup>2+</sup>(aq) + 2e<sup>&minus;</sup> &rarr; Cu(s)",
+        options: [
+          "Displacement using SCRAP IRON (since iron is more reactive than copper) OR ELECTROLYSIS (copper deposits at the negative cathode)",
+          "Filtration through filter paper OR simple distillation",
+          "Adding sodium hydroxide OR bubbling carbon dioxide",
+          "Heating with limestone OR adding chlorine water"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: The metal compounds can be processed to obtain the metal. For example, copper can be obtained from solutions of copper salts by electrolysis or by displacement using scrap iron."
+      },
+      {
+        id: "T10_Q23",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "higher",
+        isPractical: false,
+        question: "Which balanced SYMBOL EQUATION and IONIC EQUATION represent the displacement of copper from copper(II) sulfate solution using scrap iron?",
+        formulaBox: "Iron + Copper(II) sulfate &rarr; Iron(II) sulfate + Copper",
+        options: [
+          "Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s);  Ionic: Fe(s) + Cu<sup>2+</sup>(aq) &rarr; Fe<sup>2+</sup>(aq) + Cu(s)",
+          "2Fe(s) + 3CuSO<sub>4</sub>(aq) &rarr; Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>(aq) + 3Cu(s);  Ionic: Fe + Cu &rarr; FeCu",
+          "Cu(s) + FeSO<sub>4</sub>(aq) &rarr; CuSO<sub>4</sub>(aq) + Fe(s);  Ionic: Cu + Fe<sup>2+</sup> &rarr; Cu<sup>2+</sup> + Fe",
+          "Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeS(s) + CuO<sub>2</sub>(g)"
+        ],
+        correctIndex: 0,
+        explanation: "Iron atoms lose 2 electrons (oxidised to Fe<sup>2+</sup>) and Cu<sup>2+</sup> ions gain 2 electrons (reduced to Cu metal)."
+      },
+      {
+        id: "T10_Q24",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "higher",
+        isPractical: false,
+        question: "What is the main DISADVANTAGE of phytomining and bioleaching compared with traditional smelting of high-grade copper ores?",
+        formulaBox: "Evaluating biological extraction methods",
+        options: [
+          "Both phytomining and bioleaching are very SLOW processes (taking months/years to grow crops or leach ores), and burning plants in phytomining still releases CO<sub>2</sub>",
+          "They dig huge open-cast quarries and destroy mountains",
+          "They produce radioactive waste",
+          "They require temperatures of 3000 &deg;C"
+        ],
+        correctIndex: 0,
+        explanation: "While environmentally gentler (less noise, dust, and spoil heaps), phytomining and bioleaching are much slower than conventional mining and smelting."
+      },
+      {
+        id: "T10_Q25",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "What are the FOUR stages assessed in a LIFE CYCLE ASSESSMENT (LCA) of a product?",
+        formulaBox: "Cradle-to-grave environmental impact assessment",
+        options: [
+          "1. Extracting and processing raw materials &rarr; 2. Manufacturing and packaging &rarr; 3. Use and operation during its lifetime &rarr; 4. Disposal at the end of its useful life (including transport &amp; distribution at each stage)",
+          "1. Advertising &rarr; 2. Selling in shops &rarr; 3. Pricing &rarr; 4. Profit calculation",
+          "1. Filtering &rarr; 2. Sterilising &rarr; 3. Sedimentation &rarr; 4. Digestion",
+          "1. Mining &rarr; 2. Electrolysis &rarr; 3. Rusting &rarr; 4. Galvanising"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification lists the exact 4 LCA stages: extracting and processing raw materials, manufacturing and packaging, use and operation during its lifetime, and disposal at the end of its useful life, including transport and distribution at each stage."
+      },
+      {
+        id: "T10_Q26",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "higher",
+        isPractical: false,
+        question: "Why is a Life Cycle Assessment (LCA) NOT a purely objective scientific process, and how can selective or abbreviated LCAs be misused?",
+        formulaBox: "Evaluating limitations &amp; bias in LCAs",
+        options: [
+          "While water, resource, and energy use can be quantified, allocating numerical values to pollutant effects requires SUBJECTIVE VALUE JUDGEMENTS; companies can also misuse selective LCAs to make biased advertising claims ('greenwashing')",
+          "Because water and energy consumption can never be measured in numbers",
+          "Because LCAs only look at the disposal stage and ignore raw materials",
+          "Because plastic bags always have zero environmental impact"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Use of water, resources, energy sources, and production of some wastes can be fairly easily quantified. Allocating numerical values to pollutant effects is less straightforward and requires value judgements, so LCA is not a purely objective process. Selective or abbreviated LCAs can be devised to misuse the claims."
+      },
+      {
+        id: "T10_Q27",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "Compare the Life Cycle Assessments (LCAs) of a single-use PLASTIC shopping bag (made from crude oil) and a single-use PAPER shopping bag (made from timber).",
+        formulaBox: "Crude oil polymer vs. Wood pulp paper",
+        options: [
+          "Plastic bags use finite crude oil and are non-biodegradable (causing long-term litter), but require less water/energy to manufacture and can be reused many times; paper bags use renewable timber and biodegrade, but require huge water/energy to make and are heavier to transport",
+          "Paper bags require zero water or energy to manufacture",
+          "Plastic bags are made from renewable trees and biodegrade in 2 days",
+          "Both bags have identical environmental impacts at every stage"
+        ],
+        correctIndex: 0,
+        explanation: "This classic AQA comparison shows why LCAs involve trade-offs across raw materials, manufacturing energy/water, reuse lifetime, and end-of-life biodegradability."
+      },
+      {
+        id: "T10_Q28",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "Why do 'Reduce, Reuse, and Recycle' programmes reduce our environmental impact?",
+        formulaBox: "Circular resource economy",
+        options: [
+          "They reduce the use of limited/finite resources, reduce energy consumption, reduce waste sent to landfill, and reduce environmental impacts from quarrying and mining",
+          "They increase the amount of crude oil extracted each year",
+          "They make metals more reactive so they rust faster",
+          "They double the greenhouse gas emissions of factories"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Reduction in use, reuse, and recycling of materials by end users reduces the use of limited resources, use of energy sources, waste, and environmental impacts."
+      },
+      {
+        id: "T10_Q29",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "How are GLASS bottles reused and recycled?",
+        formulaBox: "Glass reuse vs. Glass recycling",
+        options: [
+          "Glass bottles can be washed and reused directly (e.g. milk bottles), or crushed and melted to make different glass products (such as jars or fibreglass insulation)",
+          "Glass bottles are burned in power stations to generate electricity",
+          "Glass bottles are dissolved in water and poured down the drain",
+          "Glass bottles are digested by anaerobic bacteria"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Glass bottles can be crushed and melted to make different glass products, or reused directly."
+      },
+      {
+        id: "T10_Q30",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "How are METALS (such as aluminium drinks cans and steel) recycled, and why must different metals sometimes be separated first?",
+        formulaBox: "Melting and recasting metals",
+        options: [
+          "Metals can be recycled by melting and recasting or reforming into different products; the amount of separation required depends on the metal and the properties required of the final product (e.g. scrap steel can be added to iron from a blast furnace to reduce the amount of iron that needs to be extracted)",
+          "Metals are dissolved in vinegar and sprayed onto crops",
+          "Aluminium is recycled by burning it into aluminium oxide ash",
+          "All metals must be separated into single atoms using a microscope"
+        ],
+        correctIndex: 0,
+        explanation: "AQA specification: Metals can be recycled by melting and recasting or reforming into different products. The amount of separation required for recycling depends on the metal and the properties required of the final product."
+      },
+      {
+        id: "T10_Q31",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "higher",
+        isPractical: false,
+        question: "Recycling aluminium uses only about 5% of the energy needed to extract new aluminium from bauxite ore by electrolysis. Give TWO reasons why recycling aluminium is so beneficial.",
+        formulaBox: "Aluminium recycling efficiency",
+        options: [
+          "1. Saves huge amounts of electrical energy (reducing fossil fuel burning and CO<sub>2</sub> emissions) &rarr; 2. Conserves finite bauxite ore reserves and avoids red mud mining waste",
+          "1. Makes aluminium magnetic &rarr; 2. Turns aluminium into pure gold",
+          "1. Increases bauxite mining &rarr; 2. Uses more electricity",
+          "1. Eliminates the need to collect or sort cans"
+        ],
+        correctIndex: 0,
+        explanation: "Extracting aluminium by electrolysis requires massive electrical energy to melt cryolite/Al<sub>2</sub>O<sub>3</sub>, whereas melting scrap aluminium requires far less energy."
+      },
+      {
+        id: "T10_Q32",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "higher",
+        isPractical: false,
+        question: "Why is it important to separate different types of PLASTICS (polymers) before melting and recycling them?",
+        formulaBox: "Polymer sorting for recycling",
+        options: [
+          "Different polymers have different melting points and properties; mixing incompatible plastics produces a weak, brittle recycled material with poor properties",
+          "Because mixing two plastics causes a nuclear explosion",
+          "Because plastics are metallic elements",
+          "Because all plastics dissolve in cold water"
+        ],
+        correctIndex: 0,
+        explanation: "Sorting polymers by resin code (e.g. PET, HDPE, PP) ensures uniform melting behaviour and high-quality recycled plastic."
+      },
+      {
+        id: "T10_Q33",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "foundation",
+        isPractical: false,
+        question: "Give TWO environmental problems caused by obtaining raw materials from the Earth by QUARRYING and MINING.",
+        formulaBox: "Impact of raw material extraction",
+        options: [
+          "Destruction of wildlife habitats and visual/noise/dust pollution (plus high energy use to process ores)",
+          "Creation of new rainforests and cleaner rivers",
+          "Reduction of atmospheric carbon dioxide to zero",
+          "Production of free potable drinking water"
+        ],
+        correctIndex: 0,
+        explanation: "Quarrying limestone and mining metal ores destroy habitats, scar landscapes, and generate dust, noise, and transport emissions."
+      },
+      {
+        id: "T10_Q34",
+        subtopic: "Alternative Metal Extraction, LCAs & Recycling",
+        tier: "higher",
+        isPractical: false,
+        question: "Look at the LCA data below for two drinks containers (330 cm<sup>3</sup>). Why might a manufacturer of the Aluminium Can claim in an advert that 'Aluminium is greener than Glass'?",
+        formulaBox: "<table class='data-table'><tr><th>LCA Metric (per 1000 containers)</th><th>Glass Bottle</th><th>Aluminium Can</th></tr><tr><td><strong>Raw material mass (kg)</strong></td><td>220</td><td>14</td></tr><tr><td><strong>Transport energy (MJ)</strong></td><td>480</td><td>45</td></tr><tr><td><strong>Extraction/Manufacture energy (MJ)</strong></td><td>1650</td><td>2400</td></tr></table>",
+        options: [
+          "They are using a SELECTIVE LCA highlighting only raw material mass and transport energy (where aluminium is much lighter), while ignoring the higher extraction/manufacture energy of virgin aluminium",
+          "Because aluminium cans use zero energy to extract from bauxite",
+          "Because glass bottles are made from crude oil",
+          "Because 2400 MJ is smaller than 1650 MJ"
+        ],
+        correctIndex: 0,
+        explanation: "A classic AQA data-interpretation question: selective LCAs cherry-pick favourable stages while omitting stages with high environmental impact."
+      },
+
+      // ========================================================================
+      // 3. CORROSION, ALLOYS & MATERIALS [SEPARATE 8462] (16 Questions)
+      // ========================================================================
+      {
+        id: "T10_Q35",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "What is CORROSION, and which TWO substances must BOTH be present for iron or steel to RUST?",
+        formulaBox: "4Fe + 3O<sub>2</sub> + 2xH<sub>2</sub>O &rarr; 2Fe<sub>2</sub>O<sub>3</sub>&middot;xH<sub>2</sub>O",
+        options: [
+          "Corrosion is the destruction of materials by chemical reactions with substances in the environment; rusting of iron/steel requires BOTH OXYGEN (air) and WATER",
+          "Corrosion is melting of metals; rusting requires only dry nitrogen gas",
+          "Rusting requires only pure oxygen with zero moisture",
+          "Rusting requires only boiled water with zero dissolved oxygen"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Corrosion is the destruction of materials by chemical reactions with substances in the environment. Rusting is an example of corrosion. Both air and water are necessary for iron to rust."
+      },
+      {
+        id: "T10_Q36",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "In the classic three-tube rusting experiment, an iron nail is placed in: Tube 1 (tap water + air), Tube 2 (boiled water sealed with a layer of oil), and Tube 3 (dry air + anhydrous calcium chloride). Which nail rusts and why?",
+        formulaBox: "Experimental proof of conditions for rusting",
+        options: [
+          "Only Tube 1 rusts, because Tube 2 lacks oxygen (boiling drives out dissolved O<sub>2</sub> and oil stops air re-entering) and Tube 3 lacks water (calcium chloride absorbs moisture)",
+          "Only Tube 2 rusts because oil reacts with iron",
+          "Only Tube 3 rusts because calcium chloride adds oxygen",
+          "All three nails rust at the exact same rate"
+        ],
+        correctIndex: 0,
+        explanation: "Tube 2 tests 'water without oxygen'; Tube 3 tests 'oxygen without water'; only Tube 1 has both oxygen and water, proving both are essential."
+      },
+      {
+        id: "T10_Q37",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "Why does aluminium NOT corrode away rapidly in damp air even though aluminium is much higher than iron in the reactivity series?",
+        formulaBox: "Protective Al<sub>2</sub>O<sub>3</sub> oxide layer",
+        options: [
+          "Aluminium reacts rapidly with oxygen in the air to form a thin, tough, impermeable layer of aluminium oxide (Al<sub>2</sub>O<sub>3</sub>) that adheres tightly to the surface and protects the metal underneath from further reaction",
+          "Aluminium never reacts with oxygen or water under any conditions",
+          "Aluminium is coated in a natural layer of zinc",
+          "Aluminium is a noble metal below gold in the reactivity series"
+        ],
+        correctIndex: 0,
+        explanation: "Unlike flaky rust (Fe<sub>2</sub>O<sub>3</sub>&middot;xH<sub>2</sub>O) which falls off and exposes fresh iron, aluminium oxide forms a protective barrier."
+      },
+      {
+        id: "T10_Q38",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "How does GALVANISING (coating steel with a layer of zinc) protect the steel from rusting EVEN IF the zinc coating gets scratched?",
+        formulaBox: "Barrier protection + Sacrificial protection",
+        options: [
+          "First, zinc acts as a physical barrier keeping out air and water; second, if scratched, zinc is MORE REACTIVE than iron so zinc corrodes/oxidises preferentially (sacrificial protection) instead of the iron",
+          "Zinc is less reactive than iron so iron corrodes to protect the zinc",
+          "Zinc melts when scratched and seals the crack",
+          "Zinc turns the steel into stainless steel"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 key concept: Galvanising provides both barrier protection and sacrificial protection because zinc is more reactive than iron and loses electrons more easily."
+      },
+      {
+        id: "T10_Q39",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "Which elements make up the alloys BRONZE and BRASS, and what are their typical uses?",
+        formulaBox: "Copper-based alloys",
+        options: [
+          "Bronze is an alloy of COPPER and TIN (used for statues, bells, ship propellers); Brass is an alloy of COPPER and ZINC (used for musical instruments, door fittings, taps)",
+          "Bronze is copper and zinc; Brass is copper and tin",
+          "Bronze is iron and carbon; Brass is aluminium and magnesium",
+          "Bronze is gold and silver; Brass is lead and tin"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 required alloys: Bronze = copper + tin; Brass = copper + zinc."
+      },
+      {
+        id: "T10_Q40",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "Gold used in jewellery is usually an alloy of gold with silver, copper, and zinc. Pure gold is 24 carat. What percentage by mass of GOLD is present in an 18-carat gold ring?",
+        formulaBox: "Carat rating = (parts of pure gold / 24) &times; 100%",
+        options: [
+          "75%",
+          "18%",
+          "50%",
+          "91.7%"
+        ],
+        correctIndex: 0,
+        explanation: "18 / 24 = 3 / 4 = 0.75 = 75% gold (and 25% alloying metals to make it harder and more hard-wearing than soft pure 24-carat gold)."
+      },
+      {
+        id: "T10_Q41",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "How do the properties and uses of HIGH-CARBON STEEL, LOW-CARBON STEEL, and STAINLESS STEEL differ?",
+        formulaBox: "Iron alloys (steels)",
+        options: [
+          "High-carbon steel is strong but brittle (cutting tools, chisels); Low-carbon steel is softer and more easily shaped (car body panels); Stainless steel (iron + chromium + nickel) is hard and resistant to corrosion (cutlery, surgical instruments)",
+          "High-carbon steel is soft and bends easily; Low-carbon steel is extremely brittle",
+          "Stainless steel is pure iron with zero added elements",
+          "High-carbon steel never rusts, whereas stainless steel rusts in 5 minutes"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 exact specification: High carbon steel is strong but brittle. Low carbon steel is softer and more easily shaped. Steels containing chromium and nickel (stainless steels) are hard and resistant to corrosion."
+      },
+      {
+        id: "T10_Q42",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "Why are alloys of ALUMINIUM (such as magnalium, containing aluminium and magnesium) used to build aircraft bodies?",
+        formulaBox: "Low density + High strength",
+        options: [
+          "Aluminium alloys have a LOW DENSITY (lightweight for flight and fuel efficiency) while being much STRONGER than pure aluminium",
+          "Aluminium alloys have a very high density so the plane stays heavy",
+          "Pure aluminium is too hard to shape",
+          "Aluminium alloys are magnetic"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Aluminium alloys are low density."
+      },
+      {
+        id: "T10_Q43",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "How are SODA-LIME GLASS and BOROSILICATE GLASS made, and how do their properties differ?",
+        formulaBox: "Comparing types of glass",
+        options: [
+          "Soda-lime glass is made by heating sand, sodium carbonate, and limestone (most common glass, melts at a lower temperature); Borosilicate glass is made from sand and boron trioxide, and melts at a HIGHER temperature (used for ovenware and laboratory glassware)",
+          "Soda-lime glass is made from clay; Borosilicate glass is made from crude oil",
+          "Borosilicate glass melts at room temperature, whereas soda-lime glass never melts",
+          "Both are made by polymerising ethene gas"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Most of the glass we use is soda-lime glass, made by heating a mixture of sand, sodium carbonate, and limestone. Borosilicate glass, made from sand and boron trioxide, melts at higher temperatures than soda-lime glass."
+      },
+      {
+        id: "T10_Q44",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "How are CLAY CERAMICS (such as pottery and bricks) manufactured?",
+        formulaBox: "Wet clay &rarr; Shaped &rarr; Heated in a furnace",
+        options: [
+          "By shaping wet clay and then heating it in a furnace (kiln) to very high temperatures",
+          "By cooling molten sand rapidly in liquid nitrogen",
+          "By mixing sand, cement, and gravel with water",
+          "By reacting ethene with a catalyst at 2000 atm"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Clay ceramics, including pottery and bricks, are made by shaping wet clay and then heating in a furnace."
+      },
+      {
+        id: "T10_Q45",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "In terms of structure and bonding, why do THERMOSOFTENING polymers melt when heated, whereas THERMOSETTING polymers do NOT melt when heated?",
+        formulaBox: "Polymer chain interactions",
+        options: [
+          "Thermosoftening polymers consist of individual tangled polymer chains held together only by weak intermolecular forces (which are easily overcome on heating); Thermosetting polymers have strong covalent CROSS-LINKS between chains that hold them rigidly together",
+          "Thermosoftening polymers have covalent cross-links, whereas thermosetting polymers have weak intermolecular forces",
+          "Thermosetting polymers are made of pure copper",
+          "Thermosoftening polymers contain ionic bonds"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Thermosoftening polymers melt when they are heated. Thermosetting polymers do not melt when they are heated (due to covalent cross-links between polymer chains)."
+      },
+      {
+        id: "T10_Q46",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "Both Low-Density Poly(ethene) (LDPE) and High-Density Poly(ethene) (HDPE) are made from the same monomer (ethene). What determines whether LDPE or HDPE is formed, and why do their properties differ?",
+        formulaBox: "Same monomer (C<sub>2</sub>H<sub>4</sub>) &rarr; Different reaction conditions &rarr; Different properties",
+        options: [
+          "The reaction conditions (temperature, pressure, and catalyst): LDPE is made at very high pressure with trace oxygen (branched chains cannot pack closely &rarr; flexible, lower density); HDPE is made at lower temperature/pressure with a catalyst (unbranched straight chains pack closely &rarr; rigid, higher density)",
+          "LDPE is made from propene and HDPE is made from chloroethene",
+          "LDPE has covalent cross-links and HDPE is a ceramic",
+          "HDPE is made at 5000 &deg;C with no catalyst"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: The properties of polymers depend on what monomers they are made from and the conditions under which they are made (e.g. LDPE vs. HDPE)."
+      },
+      {
+        id: "T10_Q47",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "What is a COMPOSITE MATERIAL, and what are its TWO structural components called?",
+        formulaBox: "Reinforcement + Matrix (binder)",
+        options: [
+          "A material made from two or more different materials combined to give improved properties: it consists of a REINFORCEMENT (fibres or fragments) bound together by a surrounding MATRIX (binder)",
+          "A pure chemical element found in Group 0",
+          "A mixture of two metals melted together (an alloy)",
+          "A single polymer chain made from one monomer"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Most composites are made of two materials, a matrix or binder surrounding and binding together fibres or fragments of the other material, which is called the reinforcement."
+      },
+      {
+        id: "T10_Q48",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "Which list contains ONLY examples of COMPOSITE MATERIALS?",
+        formulaBox: "Identifying composites",
+        options: [
+          "Fibreglass (glass fibres in polymer resin), carbon fibre reinforced polymer, concrete (aggregate in cement), and wood (cellulose fibres in lignin)",
+          "Bronze, brass, stainless steel, and 18-carat gold",
+          "Soda-lime glass, borosilicate glass, and brick",
+          "Pure copper, pure iron, and diamond"
+        ],
+        correctIndex: 0,
+        explanation: "Fibreglass, carbon fibre composites, concrete/reinforced concrete, MDF/plywood, and natural wood are all classic composites."
+      },
+      {
+        id: "T10_Q49",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "Why is CARBON FIBRE REINFORCED POLYMER used to build racing cars, aircraft wings, and high-performance bicycles?",
+        formulaBox: "Carbon fibres (reinforcement) + Epoxy polymer (matrix)",
+        options: [
+          "It has an exceptionally high strength-to-weight ratio (very strong and stiff yet very low density/lightweight)",
+          "It is much cheaper than concrete and very heavy",
+          "It melts easily at 50 &deg;C so it can be reshaped every race",
+          "It is a good conductor of heat for frying pans"
+        ],
+        correctIndex: 0,
+        explanation: "Carbon fibres provide high tensile strength and stiffness while the polymer matrix keeps the composite lightweight."
+      },
+      {
+        id: "T10_Q50",
+        subtopic: "Corrosion, Alloys & Materials",
+        tier: "separate",
+        isPractical: false,
+        question: "Large steel ships have blocks of MAGNESIUM or ZINC bolted onto the outside of their steel hulls below the waterline. How does this prevent the hull from rusting?",
+        formulaBox: "Sacrificial anodes on marine hulls",
+        options: [
+          "Magnesium and zinc are more reactive than iron, so they lose electrons and oxidise/corrode preferentially (sacrificial protection) instead of the steel hull; the blocks are replaced once used up",
+          "Magnesium and zinc dissolve in seawater to turn it into fresh water",
+          "Magnesium is less reactive than iron so it forms a waterproof paint",
+          "The blocks increase the temperature of the hull above 100 &deg;C"
+        ],
+        correctIndex: 0,
+        explanation: "Sacrificial protection works by attaching a more reactive metal (Mg or Zn) that corrodes in place of iron."
+      },
+
+      // ========================================================================
+      // 4. THE HABER PROCESS & NPK FERTILISERS [SEPARATE 8462] (24 Questions)
+      // ========================================================================
+      {
+        id: "T10_Q51",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "What is the HABER PROCESS used to manufacture, and what is the balanced reversible equation for the reaction?",
+        formulaBox: "Industrial manufacture of ammonia",
+        options: [
+          "Ammonia (NH<sub>3</sub>):  N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g)",
+          "Sulfuric acid (H<sub>2</sub>SO<sub>4</sub>):  2SO<sub>2</sub>(g) + O<sub>2</sub>(g) &#8652; 2SO<sub>3</sub>(g)",
+          "Nitric acid (HNO<sub>3</sub>):  NH<sub>3</sub>(g) + 2O<sub>2</sub>(g) &rarr; HNO<sub>3</sub>(aq) + H<sub>2</sub>O(l)",
+          "Ammonia (NH<sub>3</sub>):  N<sub>2</sub>(g) + H<sub>2</sub>(g) &#8652; NH<sub>3</sub>(g)"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: The Haber process is used to manufacture ammonia, which can be used to produce nitrogen-based fertilisers. Equation: N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g)."
+      },
+      {
+        id: "T10_Q52",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Where are the TWO raw materials—NITROGEN and HYDROGEN—obtained from for the industrial Haber process?",
+        formulaBox: "Sources of N<sub>2</sub> and H<sub>2</sub>",
+        options: [
+          "Nitrogen is obtained from the AIR (by fractional distillation of liquid air); Hydrogen is obtained mainly from NATURAL GAS (methane) reacting with steam",
+          "Nitrogen is obtained from crude oil; Hydrogen is obtained from limestone",
+          "Both nitrogen and hydrogen are mined from phosphate rock",
+          "Nitrogen is obtained from sea water; Hydrogen is obtained from burning coal"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: The raw materials for the Haber process are nitrogen and hydrogen (nitrogen from the air, hydrogen mainly from natural gas)."
+      },
+      {
+        id: "T10_Q53",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "What are the standard industrial operating conditions (temperature, pressure, and catalyst) used in the HABER PROCESS?",
+        formulaBox: "Industrial Haber reactor conditions",
+        options: [
+          "Temperature: 450 &deg;C; Pressure: 200 atmospheres (20,000 kPa); Catalyst: Iron",
+          "Temperature: 25 &deg;C; Pressure: 1 atmosphere; Catalyst: Vanadium(V) oxide",
+          "Temperature: 1000 &deg;C; Pressure: 10 atmospheres; Catalyst: Platinum",
+          "Temperature: 100 &deg;C; Pressure: 500 atmospheres; Catalyst: Manganese(IV) oxide"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: The purified gases are passed over a catalyst of iron at a high temperature (about 450 &deg;C) and a high pressure (about 200 atmospheres)."
+      },
+      {
+        id: "T10_Q54",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "In the Haber process, how is the ammonia product separated from unreacted nitrogen and hydrogen gases leaving the reactor, and what happens to the unreacted gases?",
+        formulaBox: "Cooling &amp; recycling in the Haber loop",
+        options: [
+          "The gas mixture is cooled so that ammonia condenses into a LIQUID (since ammonia has a much higher boiling point than N<sub>2</sub> and H<sub>2</sub>) and is tapped off; the unreacted N<sub>2</sub> and H<sub>2</sub> gases are RECYCLED back into the reactor",
+          "The mixture is passed through filter paper to trap solid ammonia, and unreacted gases are vented into the atmosphere",
+          "Ammonia is dissolved in sulfuric acid inside the reactor, and unreacted gases are burned",
+          "The mixture is heated to 2000 &deg;C to boil off the nitrogen"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Some of the hydrogen and nitrogen reacts to form ammonia. The reaction is reversible so some of the ammonia produced breaks down into nitrogen and hydrogen again. On cooling, the ammonia liquefies and is removed. The remaining hydrogen and nitrogen are recycled."
+      },
+      {
+        id: "T10_Q55",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "The forward reaction in the Haber process is EXOTHERMIC: N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g) (&Delta;H = &minus;92 kJ/mol). Why is a COMPROMISE temperature of 450 &deg;C used rather than a very low temperature like 50 &deg;C?",
+        formulaBox: "Compromise between Equilibrium Yield and Rate of Reaction",
+        options: [
+          "A lower temperature would shift equilibrium right to give a higher percentage yield of ammonia, but the RATE OF REACTION would be far too slow to be economical; 450 &deg;C is a compromise giving a reasonable yield quickly",
+          "A higher temperature increases the equilibrium yield of ammonia",
+          "At 50 &deg;C ammonia turns into nitric acid",
+          "The iron catalyst melts at 450 &deg;C"
+        ],
+        correctIndex: 0,
+        explanation: "Classic 3-mark AQA Higher/Triple question: Low temperature = high yield (exothermic) but too slow; high temperature = fast rate but low yield (shifts endothermic left) + high energy cost. 450 &deg;C is the economic compromise."
+      },
+      {
+        id: "T10_Q56",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "In the Haber process (N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g)), why does increasing the pressure favour the forward reaction, and why is 200 atm used as a COMPROMISE rather than 1000 atm?",
+        formulaBox: "4 moles of gas (left) &#8652; 2 moles of gas (right)",
+        options: [
+          "Higher pressure shifts equilibrium to the side with FEWER gas molecules (right, 2 moles vs 4 moles) increasing yield AND increases rate; however, pressures above 200 atm require extremely thick, expensive pipes/vessels and high energy to compress gases safely",
+          "Higher pressure shifts equilibrium to the left because there are more gas molecules on the right",
+          "200 atm is used because pressure has zero effect on equilibrium yield",
+          "At 1000 atm the iron catalyst evaporates"
+        ],
+        correctIndex: 0,
+        explanation: "High pressure increases BOTH yield (4 gas moles &rarr; 2 gas moles) and rate, so the limit is purely cost and safety of high-pressure engineering (200 atm)."
+      },
+      {
+        id: "T10_Q57",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "What effect does the IRON CATALYST have on the equilibrium yield of ammonia and the rate of reaction in the Haber process?",
+        formulaBox: "Role of the iron catalyst",
+        options: [
+          "It INCREASES THE RATE of both the forward and reverse reactions equally (by providing an alternative pathway with lower activation energy), so equilibrium is reached faster, with NO EFFECT on the equilibrium yield",
+          "It increases the equilibrium percentage yield of ammonia from 15% to 95%",
+          "It slows down the reverse reaction while speeding up the forward reaction",
+          "It reacts permanently with nitrogen to form iron nitride"
+        ],
+        correctIndex: 0,
+        explanation: "Examiner Golden Rule: A catalyst speeds up forward and reverse reactions equally—it lets you reach equilibrium faster (allowing a lower temperature to be used), without changing the equilibrium position/yield."
+      },
+      {
+        id: "T10_Q58",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Look at the Haber process yield table below. Which combination of temperature and pressure gives the HIGHEST equilibrium percentage yield of ammonia?",
+        formulaBox: "<table class='data-table'><tr><th>Temp / Pressure</th><th>100 atm</th><th>200 atm</th><th>400 atm</th></tr><tr><td><strong>350 &deg;C</strong></td><td>25%</td><td>36%</td><td>47%</td></tr><tr><td><strong>450 &deg;C</strong></td><td>10%</td><td>15%</td><td>26%</td></tr><tr><td><strong>550 &deg;C</strong></td><td>4%</td><td>7%</td><td>12%</td></tr></table>",
+        options: [
+          "350 &deg;C and 400 atm (47% yield)",
+          "550 &deg;C and 100 atm (4% yield)",
+          "450 &deg;C and 200 atm (15% yield)",
+          "350 &deg;C and 100 atm (25% yield)"
+        ],
+        correctIndex: 0,
+        explanation: "Lowest temperature (350 &deg;C) and highest pressure (400 atm) give the highest equilibrium yield (47%), though industrial plants compromise at 450 &deg;C and 200 atm for rate, cost, and safety."
+      },
+      {
+        id: "T10_Q59",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "What are NPK FERTILISERS, and why are they used on agricultural land?",
+        formulaBox: "Three essential plant nutrient elements",
+        options: [
+          "Formulations of various salts containing appropriate percentages of NITROGEN (N), PHOSPHORUS (P), and POTASSIUM (K) to improve agricultural productivity and replace nutrients removed by crops",
+          "Compounds of nickel, platinum, and krypton used to kill insects",
+          "Pure insoluble rocks spread onto roads in winter",
+          "Gases sprayed onto leaves to stop photosynthesis"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Compounds of nitrogen, phosphorus, and potassium are used as fertilisers to improve agricultural productivity. NPK fertilisers contain compounds of all three elements."
+      },
+      {
+        id: "T10_Q60",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Why must the nutrient salts inside NPK fertilisers be WATER-SOLUBLE?",
+        formulaBox: "Uptake by plant roots",
+        options: [
+          "Because plants can only absorb mineral ions (such as NO<sub>3</sub><sup>&minus;</sup>, NH<sub>4</sub><sup>+</sup>, PO<sub>4</sub><sup>3&minus;</sup>, and K<sup>+</sup>) dissolved in soil water through their root hair cells",
+          "So the fertiliser evaporates into the air",
+          "Because insoluble solids are toxic to earthworms",
+          "So the fertiliser turns into limestone"
+        ],
+        correctIndex: 0,
+        explanation: "Plants absorb nutrients in aqueous solution through their roots—insoluble minerals like raw phosphate rock cannot be absorbed directly."
+      },
+      {
+        id: "T10_Q61",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Where are POTASSIUM salts (such as potassium chloride and potassium sulfate) and PHOSPHATE ROCK obtained from for making NPK fertilisers?",
+        formulaBox: "Mineral sources of K and P",
+        options: [
+          "Both potassium salts (potassium chloride/sulfate) and phosphate rock are MINED from the ground; potassium salts are already soluble and can be used directly, whereas insoluble phosphate rock must be chemically treated with acid",
+          "Both are extracted from the air by fractional distillation",
+          "Potassium is made in the Haber process and phosphate rock is made from crude oil",
+          "Both are filtered out of sea water"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Potassium chloride, potassium sulfate, and phosphate rock are obtained by mining, but phosphate rock cannot be used directly as a fertiliser."
+      },
+      {
+        id: "T10_Q62",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Why can PHOSPHATE ROCK NOT be used directly as a fertiliser without chemical treatment?",
+        formulaBox: "Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>(s) in phosphate rock",
+        options: [
+          "Because phosphate rock is INSOLUBLE in water, so plant roots cannot absorb the phosphate ions until it is reacted with acid to produce soluble phosphate salts",
+          "Because phosphate rock explodes when it rains",
+          "Because phosphate rock contains no phosphorus atoms",
+          "Because phosphate rock is a gas at room temperature"
+        ],
+        correctIndex: 0,
+        explanation: "Phosphate rock consists mainly of insoluble calcium phosphate, which must be treated with nitric, sulfuric, or phosphoric acid to form soluble salts."
+      },
+      {
+        id: "T10_Q63",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Which soluble products are formed when PHOSPHATE ROCK is treated with: (1) NITRIC ACID, (2) SULFURIC ACID, and (3) PHOSPHORIC ACID?",
+        formulaBox: "Industrial acid treatment of phosphate rock (AQA 8462 required reactions)",
+        options: [
+          "1. Nitric acid &rarr; phosphoric acid and calcium nitrate; 2. Sulfuric acid &rarr; single superphosphate (a mixture of calcium phosphate and calcium sulfate); 3. Phosphoric acid &rarr; triple superphosphate (calcium phosphate)",
+          "1. Nitric acid &rarr; pure phosphorus gas; 2. Sulfuric acid &rarr; ammonium sulfate; 3. Phosphoric acid &rarr; potassium chloride",
+          "All three acids produce only insoluble calcium carbonate",
+          "1. Nitric acid &rarr; sodium chloride; 2. Sulfuric acid &rarr; iron(III) oxide; 3. Phosphoric acid &rarr; ammonia"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 exact specification: Phosphate rock is treated with nitric acid (gives phosphoric acid and calcium nitrate) or sulfuric acid (gives single superphosphate: calcium phosphate + calcium sulfate) or phosphoric acid (gives triple superphosphate: calcium phosphate)."
+      },
+      {
+        id: "T10_Q64",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "How is AMMONIA (NH<sub>3</sub>) from the Haber process used to manufacture NITRIC ACID and AMMONIUM SALTS (such as ammonium nitrate and ammonium sulfate)?",
+        formulaBox: "Ammonia &rarr; Nitric acid &amp; Ammonium salts",
+        options: [
+          "Some ammonia is oxidised to make nitric acid (HNO<sub>3</sub>); ammonia (an alkali/base) then neutralises acids such as nitric acid (forming ammonium nitrate, NH<sub>4</sub>NO<sub>3</sub>) or sulfuric acid (forming ammonium sulfate, (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>)",
+          "Ammonia is reacted with sodium metal to form ammonium chloride",
+          "Ammonia is heated with sand to make borosilicate glass",
+          "Ammonia is electrolysed to produce potassium nitrate"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: Ammonia can be used to manufacture ammonium salts and nitric acid."
+      },
+      {
+        id: "T10_Q65",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "What is the balanced symbol equation for the neutralisation reaction between aqueous ammonia and sulfuric acid to form AMMONIUM SULFATE fertiliser?",
+        formulaBox: "? NH<sub>3</sub>(aq) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; ?",
+        options: [
+          "2NH<sub>3</sub>(aq) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>(aq)",
+          "NH<sub>3</sub>(aq) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; NH<sub>4</sub>SO<sub>4</sub>(aq)",
+          "2NH<sub>3</sub>(aq) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>(aq) + H<sub>2</sub>(g)",
+          "NH<sub>4</sub>OH(aq) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; NH<sub>4</sub>SO<sub>4</sub>(aq) + H<sub>2</sub>O(l)"
+        ],
+        correctIndex: 0,
+        explanation: "Because sulfate is SO<sub>4</sub><sup>2&minus;</sup> and ammonium is NH<sub>4</sub><sup>+</sup>, the formula is (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>, requiring 2 moles of NH<sub>3</sub> per mole of H<sub>2</sub>SO<sub>4</sub> (note: no water is written on the right when using NH<sub>3</sub> directly!)."
+      },
+      {
+        id: "T10_Q66",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Compare the LABORATORY preparation of ammonium sulfate with its INDUSTRIAL production.",
+        formulaBox: "Batch titration/crystallisation vs. Continuous industrial process",
+        options: [
+          "Laboratory: small-scale batch process by titrating dilute aqueous ammonia with dilute sulfuric acid (using an indicator, then repeating without indicator) followed by gentle evaporation and crystallisation; Industry: large-scale continuous process reacting ammonia gas with concentrated sulfuric acid using heat from the exothermic reaction to evaporate water",
+          "Laboratory: uses 200 atm and an iron catalyst; Industry: uses a 25 cm<sup>3</sup> glass burette",
+          "Both laboratory and industry use identical glass conical flasks",
+          "Laboratory produces insoluble ammonium sulfate; Industry produces gaseous ammonium sulfate"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification requires comparing the industrial production of fertilisers with laboratory preparations of the same compounds (scale, batch vs continuous, raw materials, concentration, energy recovery)."
+      },
+      {
+        id: "T10_Q67",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Calculate the percentage by mass of NITROGEN in ammonium nitrate fertiliser, NH<sub>4</sub>NO<sub>3</sub>. (Relative atomic masses: N = 14, H = 1, O = 16)",
+        formulaBox: "M<sub>r</sub>(NH<sub>4</sub>NO<sub>3</sub>) = 14 + (4 &times; 1) + 14 + (3 &times; 16) = 80",
+        options: [
+          "35.0%",
+          "17.5%",
+          "28.0%",
+          "50.0%"
+        ],
+        correctIndex: 0,
+        explanation: "There are TWO nitrogen atoms in NH<sub>4</sub>NO<sub>3</sub>: mass of N = 2 &times; 14 = 28. Percentage of N = (28 &divide; 80) &times; 100 = 35.0%."
+      },
+      {
+        id: "T10_Q68",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Why is AMMONIUM NITRATE (NH<sub>4</sub>NO<sub>3</sub>) a particularly effective nitrogenous fertiliser compared with ammonium chloride (NH<sub>4</sub>Cl)?",
+        formulaBox: "Comparing nitrogen content",
+        options: [
+          "Ammonium nitrate has a higher percentage by mass of nitrogen (35.0% vs 26.2%) and provides nitrogen in both ammonium (NH<sub>4</sub><sup>+</sup>) and nitrate (NO<sub>3</sub><sup>&minus;</sup>) forms without adding unwanted chloride ions to soil",
+          "Ammonium nitrate is completely insoluble in rainwater",
+          "Ammonium chloride is a gas at room temperature",
+          "Ammonium nitrate contains phosphorus and potassium as well"
+        ],
+        correctIndex: 0,
+        explanation: "NH<sub>4</sub>NO<sub>3</sub> delivers high nitrogen mass percentage in two readily absorbed ions."
+      },
+      {
+        id: "T10_Q69",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "In the Haber process, hydrogen is produced by reacting methane (from natural gas) with steam: CH<sub>4</sub>(g) + H<sub>2</sub>O(g) &#8652; CO(g) + 3H<sub>2</sub>(g). Why must any trace sulfur compounds and carbon monoxide be removed before the gases pass over the iron catalyst?",
+        formulaBox: "Preventing catalyst poisoning",
+        options: [
+          "Sulfur compounds and carbon monoxide 'poison' the iron catalyst by binding strongly to its active sites, reducing its effectiveness and slowing down ammonia production",
+          "Because sulfur turns ammonia into gold",
+          "Because carbon monoxide cools the reactor to &minus;200 &deg;C",
+          "Because sulfur makes the reaction irreversible"
+        ],
+        correctIndex: 0,
+        explanation: "Purifying the reactant gases prevents catalyst poisoning so the iron catalyst stays active for years."
+      },
+      {
+        id: "T10_Q70",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "In the Haber process, nitrogen and hydrogen are mixed in a 1 : 3 volume ratio (N<sub>2</sub> : 3H<sub>2</sub>). If 60 dm<sup>3</sup> of nitrogen reacts completely with excess hydrogen at constant temperature and pressure, what maximum volume of ammonia gas would be formed (assuming 100% conversion)?",
+        formulaBox: "N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g)",
+        options: [
+          "120 dm<sup>3</sup>",
+          "60 dm<sup>3</sup>",
+          "180 dm<sup>3</sup>",
+          "30 dm<sup>3</sup>"
+        ],
+        correctIndex: 0,
+        explanation: "From the balanced equation, 1 volume of N<sub>2</sub> produces 2 volumes of NH<sub>3</sub>, so 60 dm<sup>3</sup> &times; 2 = 120 dm<sup>3</sup>."
+      },
+      {
+        id: "T10_Q71",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Why does the actual percentage yield of ammonia in a single pass through a Haber reactor only reach about 15% rather than 100%?",
+        formulaBox: "Dynamic equilibrium in a continuous flow reactor",
+        options: [
+          "Because the reaction is REVERSIBLE (so some ammonia decomposes back into N<sub>2</sub> and H<sub>2</sub>) and the gases do not stay in the reactor long enough to reach full equilibrium before being cooled to remove liquid ammonia and recycle unreacted gases",
+          "Because 85% of the nitrogen leaks out of the steel pipes",
+          "Because the iron catalyst destroys ammonia",
+          "Because hydrogen is insoluble in nitrogen"
+        ],
+        correctIndex: 0,
+        explanation: "Although single-pass conversion is ~15%, recycling unreacted N<sub>2</sub> and H<sub>2</sub> repeatedly gives an overall conversion efficiency of over 97%."
+      },
+      {
+        id: "T10_Q72",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Which balanced equation shows the reaction of PHOSPHATE ROCK, Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>, with PHOSPHORIC ACID to produce TRIPLE SUPERPHOSPHATE, Ca(H<sub>2</sub>PO<sub>4</sub>)<sub>2</sub>?",
+        formulaBox: "Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub> + ? H<sub>3</sub>PO<sub>4</sub> &rarr; ? Ca(H<sub>2</sub>PO<sub>4</sub>)<sub>2</sub>",
+        options: [
+          "Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub> + 4H<sub>3</sub>PO<sub>4</sub> &rarr; 3Ca(H<sub>2</sub>PO<sub>4</sub>)<sub>2</sub>",
+          "Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub> + H<sub>3</sub>PO<sub>4</sub> &rarr; Ca(H<sub>2</sub>PO<sub>4</sub>)<sub>2</sub>",
+          "Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub> + 3H<sub>2</sub>SO<sub>4</sub> &rarr; 3CaSO<sub>4</sub> + 2H<sub>3</sub>PO<sub>4</sub>",
+          "Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub> + 6HNO<sub>3</sub> &rarr; 3Ca(NO<sub>3</sub>)<sub>2</sub> + 2H<sub>3</sub>PO<sub>4</sub>"
+        ],
+        correctIndex: 0,
+        explanation: "Check atoms: 3 Ca, 6 P (2 + 4 = 6), 12 H (4 &times; 3 = 3 &times; 4), and 24 O (8 + 16 = 3 &times; 8). Triple superphosphate contains no unwanted calcium sulfate!"
+      },
+      {
+        id: "T10_Q73",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "In the laboratory preparation of ammonium sulfate crystals from dilute sulfuric acid and dilute aqueous ammonia, why do you perform a titration with methyl orange indicator first, and then REPEAT the experiment WITHOUT the indicator using the exact same volumes?",
+        formulaBox: "Preparing pure, uncontaminated salt crystals",
+        options: [
+          "To obtain pure, colourless ammonium sulfate crystals that are NOT contaminated by the coloured methyl orange indicator dye",
+          "Because methyl orange explodes when heated in an evaporating basin",
+          "Because methyl orange converts ammonium sulfate into ammonium nitrate",
+          "To double the concentration of the sulfuric acid"
+        ],
+        correctIndex: 0,
+        explanation: "Both reactants (NH<sub>3</sub>(aq) and H<sub>2</sub>SO<sub>4</sub>(aq)) are colourless solutions, so an indicator is needed to find the neutralisation endpoint—repeating without indicator avoids contaminating the crystals."
+      },
+      {
+        id: "T10_Q74",
+        subtopic: "The Haber Process & NPK Fertilisers",
+        tier: "separate",
+        isPractical: false,
+        question: "Look at the bag label of a garden NPK fertiliser: 'NPK 20 : 10 : 10'. Why is this product classified as a FORMULATION (linking Topic 8 and Topic 10)?",
+        formulaBox: "NPK 20 : 10 : 10",
+        options: [
+          "It is a mixture designed as a useful product by combining different soluble nitrogen, phosphorus, and potassium compounds in carefully measured proportions to achieve the required properties for healthy plant growth",
+          "It is a single pure ionic compound with formula N<sub>20</sub>P<sub>10</sub>K<sub>10</sub>",
+          "It is a composite material made of glass fibres in a polymer matrix",
+          "It is a metallic alloy of nitrogen, phosphorus, and potassium"
+        ],
+        correctIndex: 0,
+        explanation: "AQA 8462 specification: NPK fertilisers are formulations of various salts containing appropriate percentages of the elements."
+      }
+    ];
+
+    /* ==========================================================================
+       APPLICATION STATE
+       ========================================================================== */
+    const configState = {
+      studentName: "",
+      studentEmail: "",
+      tier: "higher",         // 'foundation' | 'higher' | 'separate'
+      focus: "all",           // 'all' | 'practicals'
+      questionCount: 20
+    };
+
+    const quizState = {
+      questions: [],
+      currentIndex: 0,
+      answers: [],            // { question, selectedIndex, isCorrect }
+      answeredCurrent: false,
+      isRetryMode: false
+    };
+
+    const TIER_META = {
+      foundation: { name: "Foundation Tier", badge: "Foundation Tier Selected" },
+      higher: { name: "Higher Tier", badge: "Higher Tier Selected" },
+      separate: { name: "Separate Chemistry", badge: "Separate Chemistry Selected" }
+    };
+
+    const FOCUS_META = {
+      all: "All Using Resources Topics",
+      practicals: "Required Practicals & Water Only"
+    };
+
+    /* ==========================================================================
+       TIER & POOL FILTERING LOGIC
+       - Foundation Tier: 'foundation' questions
+       - Higher Tier: 'foundation' + 'higher' questions
+       - Separate Chemistry: 'foundation' + 'higher' + 'separate' questions
+       ========================================================================== */
+    function isQuestionEligibleForTier(q, selectedTier) {
+      if (selectedTier === "foundation") {
+        return q.tier === "foundation";
+      }
+      if (selectedTier === "higher") {
+        return q.tier === "foundation" || q.tier === "higher";
+      }
+      return true; // 'separate' includes foundation, higher, and separate
+    }
+
+    function getFilteredPool() {
+      return QUESTION_POOL.filter(q => {
+        const tierMatch = isQuestionEligibleForTier(q, configState.tier);
+        const focusMatch = configState.focus === "all" ? true : q.isPractical === true;
+        return tierMatch && focusMatch;
+      });
+    }
+
+    function updateConfigUI() {
+      ["foundation", "higher", "separate"].forEach(t => {
+        const card = document.getElementById(`tier-card-${t}`);
+        const isSel = configState.tier === t;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+      });
+      document.getElementById("selected-tier-badge").textContent = TIER_META[configState.tier].badge;
+
+      ["all", "practicals"].forEach(f => {
+        const card = document.getElementById(`focus-card-${f}`);
+        const chk = document.getElementById(`focus-check-${f}`);
+        const isSel = configState.focus === f;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+        chk.classList.toggle("hidden", !isSel);
+      });
+
+      document.querySelectorAll(".count-btn").forEach(btn => {
+        const val = Number(btn.getAttribute("data-count"));
+        btn.classList.toggle("active", val === configState.questionCount);
+      });
+
+      const pool = getFilteredPool();
+      const focusSuffix = configState.focus === "practicals" ? " (Required Practical 8 & Water)" : "";
+      document.getElementById("available-q-label").textContent =
+        `${pool.length} unique questions available for ${TIER_META[configState.tier].name}${focusSuffix}`;
+
+      const capBanner = document.getElementById("cap-feedback-banner");
+      const effectiveCount = Math.min(configState.questionCount, pool.length);
+
+      if (configState.questionCount > pool.length) {
+        capBanner.textContent =
+          `Note: ${TIER_META[configState.tier].name}${focusSuffix} has ${pool.length} unique questions in the bank, so your quiz will run all ${pool.length} available unique questions.`;
+        capBanner.classList.remove("hidden");
+      } else {
+        capBanner.classList.add("hidden");
+      }
+
+      document.getElementById("btn-start-quiz").innerHTML =
+        `Start ${TIER_META[configState.tier].name} Quiz (${effectiveCount} Questions) &rarr;`;
+    }
+
+    function selectTier(tierKey) {
+      configState.tier = tierKey;
+      updateConfigUI();
+    }
+
+    function selectFocus(focusKey) {
+      configState.focus = focusKey;
+      updateConfigUI();
+    }
+
+    function selectCount(num) {
+      configState.questionCount = num;
+      updateConfigUI();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function launchConfiguredQuiz() {
+      const nameInput = document.getElementById("student-name");
+      const errorMsg = document.getElementById("name-error-msg");
+      const rawName = nameInput.value.trim();
+
+      if (!rawName) {
+        nameInput.classList.remove("input-error");
+        void nameInput.offsetWidth;
+        nameInput.classList.add("input-error");
+        errorMsg.classList.remove("hidden");
+        nameInput.focus();
+        return;
+      }
+
+      nameInput.classList.remove("input-error");
+      errorMsg.classList.add("hidden");
+
+      configState.studentName = rawName;
+      configState.studentEmail = document.getElementById("student-email").value.trim();
+
+      const pool = shuffleArray(getFilteredPool());
+      const selectedQuestions = pool.slice(0, Math.min(configState.questionCount, pool.length));
+
+      quizState.questions = selectedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = false;
+
+      switchScreen("view-quiz");
+      document.getElementById("banner-main-title").textContent = "Topic 10: Using Resources";
+      document.getElementById("banner-main-sub").textContent =
+        `${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      renderActiveQuestion();
+    }
+
+    function startRetryMissed() {
+      const missedQuestions = quizState.answers
+        .filter(item => !item.isCorrect)
+        .map(item => item.question);
+
+      if (missedQuestions.length === 0) return;
+
+      quizState.questions = missedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = true;
+
+      switchScreen("view-quiz");
+      renderActiveQuestion();
+    }
+
+    function returnToConfig() {
+      switchScreen("view-config");
+      document.getElementById("banner-main-title").textContent = "Configure Your Using Resources Quiz";
+      document.getElementById("banner-main-sub").textContent =
+        "Enter your name, choose your tier or Separate Chemistry pathway, select either all Topic 10 content or a focused Required Practical 8 & Water drill, and pick your question count.";
+      updateConfigUI();
+    }
+
+    function switchScreen(activeId) {
+      ["view-config", "view-quiz", "view-report"].forEach(id => {
+        document.getElementById(id).classList.toggle("hidden", id !== activeId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       ACTIVE QUIZ RENDERING & LOGIC
+       ========================================================================== */
+    function renderActiveQuestion() {
+      const total = quizState.questions.length;
+      const idx = quizState.currentIndex;
+      const qObj = quizState.questions[idx];
+      quizState.answeredCurrent = false;
+
+      document.getElementById("hud-student-pill").textContent = configState.studentName;
+      document.getElementById("hud-tier-pill").textContent = TIER_META[configState.tier].name;
+      document.getElementById("hud-focus-pill").textContent = FOCUS_META[configState.focus];
+      document.getElementById("hud-retry-pill").classList.toggle("hidden", !quizState.isRetryMode);
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+      document.getElementById("hud-counter").textContent = `Question ${idx + 1} of ${total}`;
+
+      const pct = Math.round((idx / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${pct}%`;
+
+      const kickerEl = document.getElementById("q-kicker-label");
+      kickerEl.innerHTML = `<span>Question ${idx + 1} of ${total} &bull; ${qObj.subtopic}</span>` +
+        (qObj.isPractical ? `<span class="rp-badge">REQUIRED PRACTICAL 8 &amp; WATER</span>` : "");
+
+      document.getElementById("q-stem-text").innerHTML = qObj.question;
+
+      const formulaBox = document.getElementById("q-formula-box");
+      if (qObj.formulaBox) {
+        formulaBox.innerHTML = qObj.formulaBox;
+        formulaBox.classList.remove("hidden");
+      } else {
+        formulaBox.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("quiz-options-list");
+      optionsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      qObj.options.forEach((optText, optIdx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt-btn";
+        btn.innerHTML = `
+          <span class="opt-letter">${letters[optIdx]}</span>
+          <span>${optText}</span>
+        `;
+        btn.addEventListener("click", () => submitOption(optIdx));
+        optionsContainer.appendChild(btn);
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      fbPanel.className = "feedback-panel hidden";
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.classList.add("hidden");
+      nextBtn.innerHTML = idx === total - 1 ? "View Diagnostic Report &rarr;" : "Next Question &rarr;";
+    }
+
+    function submitOption(selectedIdx) {
+      if (quizState.answeredCurrent) return;
+      quizState.answeredCurrent = true;
+
+      const qObj = quizState.questions[quizState.currentIndex];
+      const isCorrect = selectedIdx === qObj.correctIndex;
+
+      quizState.answers.push({
+        question: qObj,
+        selectedIndex: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+
+      const total = quizState.questions.length;
+      const donePct = Math.round(((quizState.currentIndex + 1) / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${donePct}%`;
+
+      const optionBtns = document.querySelectorAll("#quiz-options-list .opt-btn");
+      optionBtns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.correctIndex) {
+          btn.classList.add("correct");
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("dimmed");
+        }
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      const fbStatus = document.getElementById("fb-status-text");
+      const fbInsight = document.getElementById("fb-insight-text");
+
+      fbPanel.classList.remove("hidden", "fb-pass", "fb-fail");
+      if (isCorrect) {
+        fbPanel.classList.add("fb-pass");
+        fbStatus.textContent = "✓ Correct — Full Marks!";
+      } else {
+        fbPanel.classList.add("fb-fail");
+        const correctLetter = ["A", "B", "C", "D"][qObj.correctIndex];
+        fbStatus.textContent = `✗ Incorrect — Correct Answer: Option ${correctLetter}`;
+      }
+      fbInsight.innerHTML = qObj.explanation;
+
+      document.getElementById("btn-next-question").classList.remove("hidden");
+    }
+
+    function advanceQuestion() {
+      if (quizState.currentIndex < quizState.questions.length - 1) {
+        quizState.currentIndex++;
+        renderActiveQuestion();
+      } else {
+        showDiagnosticReport();
+      }
+    }
+
+    /* ==========================================================================
+       DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    function showDiagnosticReport() {
+      switchScreen("view-report");
+      document.getElementById("banner-main-title").textContent = "Topic 10 Diagnostic Performance Report";
+      document.getElementById("banner-main-sub").textContent =
+        `Completed by ${configState.studentName}${configState.studentEmail ? ` (${configState.studentEmail})` : ""} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      const total = quizState.answers.length;
+      const correct = quizState.answers.filter(a => a.isCorrect).length;
+      const missed = total - correct;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById("rep-student-header").textContent =
+        `${configState.studentName} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}${quizState.isRetryMode ? " (Retry Round)" : ""}`;
+      document.getElementById("rep-pct-val").textContent = `${pct}%`;
+      document.getElementById("rep-frac-val").textContent = `(${correct} / ${total})`;
+      document.getElementById("rep-grade-pill").textContent = estimateAqaGrade(pct, configState.tier);
+
+      const msgEl = document.getElementById("rep-msg-text");
+      if (pct === 100) {
+        msgEl.textContent = `Outstanding work, ${configState.studentName}! You scored 100% across every question. Your AQA Topic 10 Using Resources knowledge is exam-ready.`;
+      } else if (pct >= 80) {
+        msgEl.textContent = `Strong performance, ${configState.studentName}! You have a solid command of Using Resources. Click 'Retry Missed Questions' below to master the final ${missed} question${missed === 1 ? "" : "s"}.`;
+      } else if (pct >= 50) {
+        msgEl.textContent = `Good progress, ${configState.studentName}! Review the amber and crimson sub-topics below, study the AQA Examiner Insights, and retry your missed questions to push into the top grade boundaries.`;
+      } else {
+        msgEl.textContent = `Great active recall practice, ${configState.studentName}! Focus on the Priority Revision sub-topics in crimson below, read the tailored AQA revision guidance, and retry your missed questions.`;
+      }
+
+      const retryBtn = document.getElementById("btn-retry-missed");
+      if (missed > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.textContent = `Retry Missed Questions (${missed})`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+
+      const topicMap = {};
+      quizState.answers.forEach(entry => {
+        const t = entry.question.subtopic;
+        if (!topicMap[t]) topicMap[t] = { correct: 0, total: 0 };
+        topicMap[t].total++;
+        if (entry.isCorrect) topicMap[t].correct++;
+      });
+
+      const masteryGrid = document.getElementById("rep-mastery-grid");
+      masteryGrid.innerHTML = "";
+
+      Object.keys(topicMap).forEach(topicName => {
+        const { correct: c, total: t } = topicMap[topicName];
+        const subPct = Math.round((c / t) * 100);
+
+        let chipClass = "sc-weak";
+        let fillClass = "fill-r";
+        let statusLabel = "Priority Revision";
+
+        if (subPct >= 80) {
+          chipClass = "sc-strong";
+          fillClass = "fill-g";
+          statusLabel = "Strong Area";
+        } else if (subPct >= 50) {
+          chipClass = "sc-dev";
+          fillClass = "fill-a";
+          statusLabel = "Developing";
+        }
+
+        const tip = subPct >= 80
+          ? "Secure understanding demonstrated—maintain with spaced active recall."
+          : (SUBTOPIC_GUIDANCE[topicName] || "Review examiner insights and retry missed questions in this sub-topic.");
+
+        const card = document.createElement("div");
+        card.className = "mastery-item";
+        card.innerHTML = `
+          <div class="mastery-item-top">
+            <span class="mastery-name">${topicName}</span>
+            <div class="mastery-right">
+              <span class="status-chip ${chipClass}">${statusLabel}</span>
+              <span style="font-size:0.84rem; font-weight:700; color:var(--slate-700);">${c}/${t} (${subPct}%)</span>
+            </div>
+          </div>
+          <div class="mastery-bar-track">
+            <div class="mastery-bar-fill ${fillClass}" style="width: ${subPct}%"></div>
+          </div>
+          <div class="mastery-tip">${tip}</div>
+        `;
+        masteryGrid.appendChild(card);
+      });
+
+      const reviewList = document.getElementById("rep-review-list");
+      reviewList.innerHTML = "";
+      reviewList.classList.add("hidden");
+      document.getElementById("btn-toggle-review").textContent = "Show Full Question-by-Question Review";
+
+      const letters = ["A", "B", "C", "D"];
+      quizState.answers.forEach((entry, idx) => {
+        const q = entry.question;
+        const userAns = `${letters[entry.selectedIndex]}. ${q.options[entry.selectedIndex]}`;
+        const rightAns = `${letters[q.correctIndex]}. ${q.options[q.correctIndex]}`;
+
+        const item = document.createElement("div");
+        item.className = `review-card ${entry.isCorrect ? "rc-ok" : "rc-bad"}`;
+        item.innerHTML = `
+          <div class="rc-kicker">Question ${idx + 1} &bull; ${q.subtopic} &bull; ${entry.isCorrect ? "Correct" : "Incorrect"}</div>
+          <div class="rc-q">${q.question}</div>
+          <div class="rc-ans"><strong>Your Answer:</strong> <span style="color:${entry.isCorrect ? "var(--emerald-700)" : "var(--ruby-600)"}; font-weight:600;">${userAns}</span></div>
+          ${!entry.isCorrect ? `<div class="rc-ans"><strong>Correct Answer:</strong> <span style="color:var(--emerald-700); font-weight:600;">${rightAns}</span></div>` : ""}
+          <div class="rc-exp"><strong>AQA Examiner Insight:</strong> ${q.explanation}</div>
+        `;
+        reviewList.appendChild(item);
+      });
+    }
+
+    function estimateAqaGrade(pct, tier) {
+      if (tier === "foundation") {
+        if (pct >= 80) return "Estimated AQA Indicator: Grade 4–5 (Maximum Foundation)";
+        if (pct >= 62) return "Estimated AQA Indicator: Grade 4 (Standard Pass)";
+        if (pct >= 45) return "Estimated AQA Indicator: Grade 3";
+        return "Estimated AQA Indicator: Grade 1–2 (Keep Practising)";
+      }
+      if (pct >= 80) return "Estimated AQA Indicator: Grade 8–9";
+      if (pct >= 65) return "Estimated AQA Indicator: Grade 6–7";
+      if (pct >= 48) return "Estimated AQA Indicator: Grade 4–5";
+      return "Estimated AQA Indicator: Grade 3 / Below (Target Revision)";
+    }
+
+    function toggleReviewSection() {
+      const list = document.getElementById("rep-review-list");
+      const btn = document.getElementById("btn-toggle-review");
+      const isHidden = list.classList.toggle("hidden");
+      btn.textContent = isHidden ? "Show Full Question-by-Question Review" : "Hide Full Question-by-Question Review";
+      if (!isHidden) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       KEYBOARD SHORTCUTS & INITIALISATION
+       ========================================================================== */
+    document.getElementById("student-name").addEventListener("input", function () {
+      if (this.value.trim()) {
+        this.classList.remove("input-error");
+        document.getElementById("name-error-msg").classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("view-quiz").classList.contains("hidden")) return;
+      const key = e.key.toUpperCase();
+      if (!quizState.answeredCurrent) {
+        if (key === "1" || key === "A") submitOption(0);
+        else if (key === "2" || key === "B") submitOption(1);
+        else if (key === "3" || key === "C") submitOption(2);
+        else if (key === "4" || key === "D") submitOption(3);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        advanceQuestion();
+      }
+    });
+
+    updateConfigUI();
+  </script>
+</body>
+</html>
